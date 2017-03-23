@@ -2,3 +2,50 @@
 17:34:39.485 INFO  - Project p3_UART0_test_bsp was a BSP project. Please update references. 
 17:34:39.485 ERROR - SDK has detected that project p3_UART0_test_bsp has been deleted (or renamed).
 If this project was a BSP referenced by other C/C++ applications, then those applications will fail to build now. Please right click on those applications and click 'Change Referenced BSP' to update those projects' BSP references. 
+18:13:20.577 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488mp4/sw/system_hw_platform/system.bit" 
+18:13:48.576 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:13:48.676 INFO  - PS initialization will be done as it is not done before. 
+18:13:48.676 INFO  - Running PS initialization.... 
+18:13:49.156 INFO  - ps7_init is completed. 
+18:13:49.256 INFO  - ps7_post_config is completed. 
+18:13:49.366 INFO  - PS Initialization is complete. 
+18:14:44.508 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:15:58.751 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:16:01.013 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:16:44.472 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:16:52.933 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:16:55.397 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:17:55.722 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:17:57.559 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:18:22.171 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:18:42.992 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:23:37.156 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:23:39.093 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:24:34.672 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:24:58.474 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:25:29.748 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:25:52.960 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:26:44.056 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:26:45.696 ERROR - Port COM3 is already in use. 
+18:26:46.086 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:26:49.522 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+18:28:53.182 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488mp4/sw/system_hw_platform/system.bit" 
+18:29:06.921 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:29:07.021 INFO  - PS initialization will be done as it is not done before. 
+18:29:07.021 INFO  - Running PS initialization.... 
+18:29:07.541 INFO  - ps7_init is completed. 
+18:29:07.641 INFO  - ps7_post_config is completed. 
+18:29:07.741 INFO  - PS Initialization is complete. 
+18:29:51.362 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:33:17.501 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:36:19.074 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:38:25.281 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:38:55.320 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:39:32.843 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:41:20.819 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:45:26.900 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

@@ -15,7 +15,13 @@
 		<item value="false" key="wholeword"/>
 		<item value="UART" key="selection"/>
 		<list key="findhistory">
+			<item value="Uart"/>
+			<item value="STDOUT_IS_16550"/>
 			<item value="UART"/>
+			<item value="STDOUT"/>
+			<item value="STDOUT_BASEADDR"/>
+			<item value="Receive"/>
+			<item value="Send"/>
 		</list>
 		<list key="replacehistory">
 		</list>

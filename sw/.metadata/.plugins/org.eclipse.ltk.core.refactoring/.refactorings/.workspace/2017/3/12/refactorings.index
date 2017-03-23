@@ -1,3 +1,5 @@
 1490308005881	Delete resource 'p3_UART0_test'
 1490308424030	Delete resource 'p3_UART0_test'
 1490308479485	Delete resource 'p3_UART0_test_bsp'
+1490310543455	Delete resource 'p3_UART0_test/src/echo_test'
+1490311164676	Delete resource 'p3_UART0_test/src/echo_test.c'

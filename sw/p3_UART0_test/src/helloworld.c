@@ -39,32 +39,34 @@
 
 XUartPs Uart_Ps;		/* The instance of the UART Driver */
 
-#define UART_DEVICE_ID	XPAR_PS7_UART_0_DEVICE_ID
-
 int sendString(XUartPs *, const char*);
 
 int main()
 {
-	int status;
-    XUartPs_Config *Config;
+//	int status;
+//    XUartPs_Config *Config;
 
     init_platform();
-
-    /*
-	 * Initialize the UART driver so that it's ready to use
-	 * Look up the configuration in the config table and then initialize it.
-	 */
-	Config = XUartPs_LookupConfig(UART_DEVICE_ID);
-	if (NULL == Config) {
-		return XST_FAILURE;
-	}
-
-	status = XUartPs_CfgInitialize(&Uart_Ps,Config, Config->BaseAddress);
-	if (status != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-
-	XUartPs_SetBaudRate(&Uart_Ps, 115200);
+    xil_printf("Ready to Start Uart crap\n");
+    printf("REadyto Start Uart crap\n");
+//    /*
+//	 * Initialize the UART driver so that it's ready to use
+//	 * Look up the configuration in the config table and then initialize it.
+//	 */
+//	Config = XUartPs_LookupConfig(XPAR_PS7_UART_0_DEVICE_ID);
+//	if (NULL == Config) {
+//		return XST_FAILURE;
+//	}
+//
+//	xil_printf("Look up Config Success\n");
+//
+//
+//	status = XUartPs_CfgInitialize(&Uart_Ps,Config, Config->BaseAddress);
+//	if (status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
+//
+//	XUartPs_SetBaudRate(&Uart_Ps, 115200);
 
     return 0;
 }

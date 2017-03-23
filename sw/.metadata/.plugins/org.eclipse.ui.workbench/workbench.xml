@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="16" version="2.0">
+<workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
-<window height="1047" width="974" x="-7" y="0">
+<window height="1047" maximized="true" width="974" x="-7" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="285" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="229" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -36,46 +36,44 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xuartps_hw.h" partName="xuartps_hw.h" path="U:/Documents/cpre488mp4/sw/system_bsp/ps7_cortexa9_0/include/xuartps_hw.h" title="xuartps_hw.h" tooltip="system_bsp/ps7_cortexa9_0/include/xuartps_hw.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/ps7_cortexa9_0/include/xuartps_hw.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="16025" selectionTopPixel="5253"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xuartps.h" partName="xuartps.h" path="U:/Documents/cpre488mp4/sw/system_bsp/ps7_cortexa9_0/include/xuartps.h" title="xuartps.h" tooltip="system_bsp/ps7_cortexa9_0/include/xuartps.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/ps7_cortexa9_0/include/xuartps.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="81" selectionTopPixel="1377"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="U:/Documents/cpre488mp4/sw/p3_UART0_test/src/helloworld.c" title="helloworld.c" tooltip="p3_UART0_test/src/helloworld.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="U:/Documents/cpre488mp4/sw/p3_UART0_test/src/helloworld.c" title="helloworld.c" tooltip="p3_UART0_test/src/helloworld.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/p3_UART0_test/src/helloworld.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2073" selectionTopPixel="277"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1533" selectionTopPixel="340"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" partName="xparameters.h" path="U:/Documents/cpre488mp4/sw/system_bsp/ps7_cortexa9_0/include/xparameters.h" title="xparameters.h" tooltip="system_bsp/ps7_cortexa9_0/include/xparameters.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="25" selectionOffset="14888" selectionTopPixel="6528"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" partName="platform.c" path="U:/Documents/cpre488mp4/sw/p3_UART0_test/src/platform.c" title="platform.c" tooltip="p3_UART0_test/src/platform.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/p3_UART0_test/src/platform.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2390" selectionTopPixel="442"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xuartps.c" partName="xuartps.c" path="U:/Documents/cpre488mp4/sw/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c" title="xuartps.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="8982" selectionTopPixel="3179"/>
+<editor id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" partName="system.xml" path="U:/Documents/cpre488mp4/sw/system_hw_platform/system.xml" title="system.xml" tooltip="system_hw_platform/system.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_hw_platform/system.xml"/>
+</editor>
+<editor activePart="true" focus="true" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" partName="system.mss" path="U:/Documents/cpre488mp4/sw/system_bsp/system.mss" title="system.mss" tooltip="system_bsp/system.mss" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/system.mss"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
-<view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
-<view id="org.eclipse.tm.terminal.view.TerminalView" partName="Terminal"/>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="org.eclipse.cdt.ui.pdomSearchViewPage" definitionColumnWidth="150" locationColumnWidth="300" matchColumnWidth="300" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" showEnclosingDefinitions="true"/>
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
+</view>
+<view id="org.eclipse.tm.terminal.view.TerminalView" partName="Terminal 1">
+<viewState Title="Terminal 1" _keys_="Title,connectionManageractive,connectionManagerconnection0HasCommandInputField,connectionManagerconnection0PartName,connectionManagersize" connectionManageractive="connection0" connectionManagerconnection0HasCommandInputField="false" connectionManagerconnection0PartName="Terminal 1" connectionManagersize="1"/>
+</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings (1 item)"/>
-<category IMemento.internal.id="Warnings"/>
-<category IMemento.internal.id="Errors"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -87,12 +85,11 @@
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
-<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="com.xilinx.sdk.sw.MSSEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -142,10 +139,10 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
-<view id="org.eclipse.ui.views.TaskList"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.PropertySheet"/>
 <view id="org.eclipse.tm.terminal.view.TerminalView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
 <fastViewBars>
 <fastViewBar fastViewLocation="131072" id="topRight" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
 <fastViews>
@@ -176,13 +173,14 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.22280887" ratioLeft="211" ratioRight="736" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottom" ratio="0.74922603" ratioLeft="484" ratioRight="162" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.69924814" ratioLeft="651" ratioRight="280" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
-<page content="org.eclipse.tm.terminal.view.TerminalView" label="Terminal"/>
+<page content="org.eclipse.tm.terminal.view.TerminalView" label="Terminal 1"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
@@ -193,7 +191,7 @@
 </folder>
 </info>
 <info folder="true" part="topRight" ratio="0.7493333" ratioLeft="562" ratioRight="188" relationship="2" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.make.ui.views.MakeView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
@@ -206,123 +204,158 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/system_hw_platform/system.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/system_bsp/system.mss"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xuartps_hw.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xuartps.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/p3_UART0_test/src/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/p3_UART0_test_bsp/system.mss"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/p3_UART0_test/src/helloworld.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/p3_UART0_test/src/platform.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_hw_platform/ps7_init.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/p3_UART0_test/src/echo_test.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/p3_UART0_test/src/platform.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" path="/system_hw_platform/system.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/p3_UART0_test/src/platform.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_hw_platform/ps7_init.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" path="/system_bsp/system.mss"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_hw_platform/ps7_init.h"/>
 </editors>
-<item historyLabel="system.xml" index="0"/>
-<item historyLabel="system.xml" index="0"/>
-<item historyLabel="system.mss" index="1"/>
-<item historyLabel="xuartps_hw.h" index="2">
-<position info="not_deleted" x="82" y="0"/>
+<item historyLabel="echo_test.c" index="1">
+<position info="not_deleted" x="5235" y="0"/>
 </item>
-<item historyLabel="xuartps.h" index="3">
-<position info="not_deleted" x="81" y="0"/>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1399" y="22"/>
 </item>
-<item historyLabel="xuartps_hw.h" index="2">
-<position info="not_deleted" x="82" y="0"/>
-</item>
-<item historyLabel="xuartps.h" index="3">
-<position info="not_deleted" x="81" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="131" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="44" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="22" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="129" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="104" y="0"/>
-</item>
-<item historyLabel="main.c" index="4">
-<position info="not_deleted" x="0" y="131"/>
-</item>
-<item historyLabel="xuartps.h" index="3">
-<position info="not_deleted" x="81" y="0"/>
-</item>
-<item historyLabel="system.mss" index="5"/>
-<item historyLabel="xuartps.h" index="3">
-<position info="not_deleted" x="81" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="6">
-<position info="not_deleted" x="1630" y="13"/>
-</item>
-<item historyLabel="platform.c" index="7">
-<position info="not_deleted" x="3314" y="13"/>
-</item>
-<item historyLabel="platform.c" index="7">
-<position info="not_deleted" x="3659" y="9"/>
-</item>
-<item historyLabel="platform.c" index="7">
-<position info="not_deleted" x="3242" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="6">
-<position info="not_deleted" x="2055" y="0"/>
-</item>
-<item historyLabel="xuartps_hw.h" index="2">
-<position info="not_deleted" x="16025" y="16"/>
-</item>
-<item historyLabel="helloworld.c" index="6">
-<position/>
-</item>
-<item historyLabel="system.xml" index="0"/>
-<item historyLabel="helloworld.c" index="6">
-<position/>
-</item>
-<item historyLabel="ps7_init.h" index="8">
-<position info="not_deleted" x="4833" y="4"/>
-</item>
-<item historyLabel="helloworld.c" index="6">
-<position/>
-</item>
-<item historyLabel="system.mss" index="1"/>
-<item historyLabel="helloworld.c" index="6">
-<position/>
-</item>
-<item historyLabel="xparameters.h" index="9">
-<position info="not_deleted" x="14915" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="6">
-<position info="not_deleted" x="1422" y="0"/>
-</item>
-<item historyLabel="xparameters.h" index="9">
-<position info="not_deleted" x="14888" y="25"/>
-</item>
-<item historyLabel="helloworld.c" index="6">
-<position info="not_deleted" x="1478" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="6">
-<position info="not_deleted" x="1985" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="6">
-<position info="not_deleted" x="1567" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="6">
-<position/>
-</item>
-<item historyLabel="xuartps.c" index="10">
+<item historyLabel="xuartps.c" index="2">
 <position info="not_deleted" x="8982" y="8"/>
 </item>
-<item active="true" historyLabel="helloworld.c" index="6">
-<position info="not_deleted" x="2217" y="0"/>
+<item historyLabel="xuartps.c" index="2">
+<position info="not_deleted" x="10386" y="18"/>
 </item>
+<item historyLabel="xuartps.c" index="2">
+<position info="not_deleted" x="14594" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2002" y="0"/>
+</item>
+<item historyLabel="xuartps.c" index="2">
+<position info="not_deleted" x="16280" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1584" y="13"/>
+</item>
+<item historyLabel="platform.c" index="3">
+<position info="not_deleted" x="3314" y="0"/>
+</item>
+<item historyLabel="xuartps.c" index="2">
+<position info="not_deleted" x="16280" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1584" y="13"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1897" y="0"/>
+</item>
+<item historyLabel="xuartps.c" index="2">
+<position info="not_deleted" x="16280" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1584" y="13"/>
+</item>
+<item historyLabel="platform.c" index="3">
+<position info="not_deleted" x="3314" y="13"/>
+</item>
+<item historyLabel="platform.c" index="3">
+<position info="not_deleted" x="3659" y="9"/>
+</item>
+<item historyLabel="platform.c" index="3">
+<position info="not_deleted" x="3023" y="9"/>
+</item>
+<item historyLabel="xparameters.h" index="4">
+<position info="not_deleted" x="477" y="0"/>
+</item>
+<item historyLabel="system.xml" index="5"/>
+<item historyLabel="platform.c" index="3">
+<position info="not_deleted" x="3023" y="0"/>
+</item>
+<item historyLabel="xuartps.c" index="2">
+<position info="not_deleted" x="16280" y="0"/>
+</item>
+<item historyLabel="platform.c" index="3">
+<position/>
+</item>
+<item historyLabel="xparameters.h" index="4">
+<position info="not_deleted" x="477" y="0"/>
+</item>
+<item historyLabel="system.xml" index="5"/>
+<item historyLabel="platform.c" index="3">
+<position/>
+</item>
+<item historyLabel="xparameters.h" index="4">
+<position info="not_deleted" x="438" y="0"/>
+</item>
+<item historyLabel="system.xml" index="5"/>
+<item historyLabel="xparameters.h" index="4">
+<position info="not_deleted" x="627" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1506" y="0"/>
+</item>
+<item historyLabel="xparameters.h" index="6">
+<position info="not_deleted" x="477" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1506" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1533" y="0"/>
+</item>
+<item historyLabel="xparameters.h" index="6">
+<position info="not_deleted" x="441" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1877" y="0"/>
+</item>
+<item historyLabel="xparameters.h" index="6">
+<position info="not_deleted" x="441" y="0"/>
+</item>
+<item historyLabel="platform.c" index="3">
+<position/>
+</item>
+<item historyLabel="xparameters.h" index="6">
+<position info="not_deleted" x="441" y="0"/>
+</item>
+<item historyLabel="platform.c" index="3">
+<position info="not_deleted" x="3083" y="15"/>
+</item>
+<item historyLabel="xparameters.h" index="6">
+<position info="not_deleted" x="15189" y="24"/>
+</item>
+<item historyLabel="platform.c" index="3">
+<position info="not_deleted" x="3017" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1520" y="0"/>
+</item>
+<item historyLabel="platform.c" index="3">
+<position info="not_deleted" x="3308" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="1520" y="0"/>
+</item>
+<item historyLabel="platform.c" index="7">
+<position info="not_deleted" x="2390" y="0"/>
+</item>
+<item historyLabel="ps7_init.c" index="8">
+<position info="not_deleted" x="354" y="0"/>
+</item>
+<item historyLabel="system.mss" index="9"/>
+<item historyLabel="ps7_init.h" index="10">
+<position info="not_deleted" x="2353" y="0"/>
+</item>
+<item historyLabel="ps7_init.c" index="8">
+<position info="not_deleted" x="20153" y="4"/>
+</item>
+<item historyLabel="ps7_init.h" index="10">
+<position info="not_deleted" x="4261" y="0"/>
+</item>
+<item active="true" historyLabel="system.mss" index="9"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -343,23 +376,29 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xuartps.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c">
-<persistable path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" tooltip="system_bsp/ps7_cortexa9_0/include/xparameters.h">
-<persistable path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ps7_init.h" tooltip="system_hw_platform/ps7_init.h">
+<persistable path="/system_hw_platform/ps7_init.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="system_bsp/system.mss">
 <persistable path="/system_bsp/system.mss"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ps7_init.h" tooltip="system_hw_platform/ps7_init.h">
-<persistable path="/system_hw_platform/ps7_init.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ps7_init.c" tooltip="system_hw_platform/ps7_init.c">
+<persistable path="/system_hw_platform/ps7_init.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xparameters.h" tooltip="system_bsp/ps7_cortexa9_0/include/xparameters.h">
+<persistable path="/system_bsp/ps7_cortexa9_0/include/xparameters.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" tooltip="system_hw_platform/system.xml">
 <persistable path="/system_hw_platform/system.xml"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" tooltip="p3_UART0_test/src/platform.c">
 <persistable path="/p3_UART0_test/src/platform.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="echo_test.c" tooltip="p3_UART0_test/src/echo_test.c">
+<persistable path="/p3_UART0_test/src/echo_test.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xuartps.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c">
+<persistable path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" tooltip="p3_UART0_test/src/helloworld.c">
 <persistable path="/p3_UART0_test/src/helloworld.c"/>
