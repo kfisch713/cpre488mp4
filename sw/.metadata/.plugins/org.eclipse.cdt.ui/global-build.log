@@ -249,3 +249,2661 @@ arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
   39028	   2144	  29908	  71080	  115a8	p3_UART0_test.elf
 'Finished building: p3_UART0_test.elf.size'
 ' '
+10:01:41 **** Clean-only build of project system_bsp ****
+make -k clean 
+rm -rf ps7_cortexa9_0
+10:01:55 **** Build of project system_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+10:03:17 **** Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:05:12 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26568	   1104	  29860	  57532	   e0bc	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:05:26 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:19:12 **** Build of project system_bsp ****
+make -k all 
+'Finished building libraries'
+10:19:12 **** Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:19:29 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:55:2: error: 'Config' undeclared (first use in this function)
+../src/helloworld.c:55:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:63:2: error: 'status' undeclared (first use in this function)
+make: *** [src/helloworld.o] Error 1
+10:20:44 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26772	   1136	  29860	  57768	   e1a8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:20:49 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:23:45 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26788	   1136	  29860	  57784	   e1b8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:24:07 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:69:2: warning: implicit declaration of function 'sil_printf' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+U:\Documents\cpre488mp4\sw\p3_UART0_test\Debug/../src/helloworld.c:69: undefined reference to `sil_printf'
+collect2.exe: error: ld returned 1 exit status
+make: *** [p3_UART0_test.elf] Error 1
+10:24:11 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26824	   1136	  29860	  57820	   e1dc	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:24:13 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:24:34 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26864	   1136	  29860	  57860	   e204	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:26:18 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:67:23: error: 'Uart_Ps' undeclared (first use in this function)
+../src/helloworld.c:67:23: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+10:26:26 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26884	   1136	  29860	  57880	   e218	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:27:55 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23048	   1096	  29796	  53940	   d2b4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:28:23 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:240:2: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25392	   1096	  29796	  56284	   dbdc	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:28:25 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:240:2: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25392	   1096	  29796	  56284	   dbdc	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:28:34 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25392	   1096	  29796	  56284	   dbdc	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:28:40 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:29:22 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25428	   1096	  29796	  56320	   dc00	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:29:27 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:30:47 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25404	   1096	  29796	  56296	   dbe8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:31:01 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:31:23 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'UartPsEchoExample':
+../src/helloworld.c:327:3: error: 'else' without a previous 'if'
+make: *** [src/helloworld.o] Error 1
+10:31:26 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25324	   1096	  29796	  56216	   db98	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:31:30 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:35:11 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'sendString':
+../src/helloworld.c:78:6: error: 'UartBaseAddress' undeclared (first use in this function)
+../src/helloworld.c:78:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:79:2: error: expected ')' before 'return'
+../src/helloworld.c:80:1: error: expected expression before '}' token
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:87:3: error: expected declaration specifiers before 'while'
+../src/helloworld.c:89:3: error: expected declaration specifiers before 'RecvChar'
+../src/helloworld.c:89:3: error: expected '{' at end of input
+../src/helloworld.c:89:3: warning: control reaches end of non-void function [-Wreturn-type]
+../src/helloworld.c: In function 'sendString':
+../src/helloworld.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:35:37 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'sendString':
+../src/helloworld.c:78:5: error: 'UartBaseAddress' undeclared (first use in this function)
+../src/helloworld.c:78:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:80:2: error: expected ';' before 'return'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:88:3: error: expected declaration specifiers before 'while'
+../src/helloworld.c:90:3: error: expected declaration specifiers before 'RecvChar'
+../src/helloworld.c:90:3: error: expected '{' at end of input
+../src/helloworld.c:90:3: warning: control reaches end of non-void function [-Wreturn-type]
+../src/helloworld.c: In function 'sendString':
+../src/helloworld.c:81:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:35:51 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'sendString':
+../src/helloworld.c:78:5: error: 'UartBaseAddress' undeclared (first use in this function)
+../src/helloworld.c:78:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:88:3: error: expected declaration specifiers before 'while'
+../src/helloworld.c:90:3: error: expected declaration specifiers before 'RecvChar'
+../src/helloworld.c:90:3: error: expected '{' at end of input
+../src/helloworld.c:90:3: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:40:21 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:78:5: error: 'UartBaseAddress' undeclared (first use in this function)
+../src/helloworld.c:78:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:80:36: error: 'string' undeclared (first use in this function)
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:84:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:85:10: error: expected '{' at end of input
+../src/helloworld.c:85:10: warning: control reaches end of non-void function [-Wreturn-type]
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:81:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:40:28 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:78:5: error: 'UartBaseAddress' undeclared (first use in this function)
+../src/helloworld.c:78:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:80:46: error: 'string' undeclared (first use in this function)
+../src/helloworld.c:80:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:84:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:85:10: error: expected '{' at end of input
+../src/helloworld.c:85:10: warning: control reaches end of non-void function [-Wreturn-type]
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:81:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:40:45 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:77:53: error: expected declaration specifiers or '...' before ')' token
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:84:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:85:10: error: expected '{' at end of input
+../src/helloworld.c:85:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:41:06 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:78:5: error: 'UartBaseAddress' undeclared (first use in this function)
+../src/helloworld.c:78:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:80:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:84:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:85:10: error: expected '{' at end of input
+../src/helloworld.c:85:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:41:17 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:78:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:82:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:83:10: error: expected '{' at end of input
+../src/helloworld.c:83:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:43:01 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:31: error: 'uart_ps' undeclared (first use in this function)
+../src/helloworld.c:71:31: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:71:2: error: too few arguments to function 'strlen'
+../src/helloworld.c:71:2: warning: pointer targets in passing argument 2 of 'XUartPs_Send' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:71:6: warning: unused variable 'bytesSent' [-Wunused-variable]
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:80:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:84:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:85:10: error: expected '{' at end of input
+../src/helloworld.c:85:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:43:55 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:31: error: 'uart_ps' undeclared (first use in this function)
+../src/helloworld.c:71:31: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:71:2: error: too few arguments to function 'strlen'
+../src/helloworld.c:71:2: warning: pointer targets in passing argument 2 of 'XUartPs_Send' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:71:6: warning: unused variable 'bytesSent' [-Wunused-variable]
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:80:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:84:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:85:10: error: expected '{' at end of input
+../src/helloworld.c:85:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:44:21 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:31: error: 'uart_ps' undeclared (first use in this function)
+../src/helloworld.c:72:31: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:72:2: warning: pointer targets in passing argument 2 of 'XUartPs_Send' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:72:63: error: expected ',' or ';' before ')' token
+../src/helloworld.c:72:6: warning: unused variable 'bytesSent' [-Wunused-variable]
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:81:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:85:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:86:10: error: expected '{' at end of input
+../src/helloworld.c:86:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:44:23 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:31: error: 'uart_ps' undeclared (first use in this function)
+../src/helloworld.c:72:31: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:72:2: warning: pointer targets in passing argument 2 of 'XUartPs_Send' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:72:6: warning: unused variable 'bytesSent' [-Wunused-variable]
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:81:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:85:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:86:10: error: expected '{' at end of input
+../src/helloworld.c:86:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:44:44 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:2: error: incompatible type for argument 1 of 'XUartPs_Send'
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'struct XUartPs *' but argument is of type 'XUartPs'
+../src/helloworld.c:72:2: warning: pointer targets in passing argument 2 of 'XUartPs_Send' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:72:6: warning: unused variable 'bytesSent' [-Wunused-variable]
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:81:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:85:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:86:10: error: expected '{' at end of input
+../src/helloworld.c:86:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:44:48 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:2: warning: pointer targets in passing argument 2 of 'XUartPs_Send' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:72:6: warning: unused variable 'bytesSent' [-Wunused-variable]
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:81:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:85:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:86:10: error: expected '{' at end of input
+../src/helloworld.c:86:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:45:10 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:2: warning: pointer targets in passing argument 2 of 'XUartPs_Send' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:83:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:87:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:88:10: error: expected '{' at end of input
+../src/helloworld.c:88:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:45:36 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:2: warning: passing argument 1 of 'strcpy' from incompatible pointer type [enabled by default]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xil_printf.h:9:0,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:74,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/helloworld.c:35:
+c:\xilinx\14.7\ise_ds\edk\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/include/string.h:31:8: note: expected 'char *' but argument is of type 'unsigned int *'
+../src/helloworld.c:72:2: warning: passing argument 1 of 'strlen' from incompatible pointer type [enabled by default]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xil_printf.h:9:0,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:74,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/helloworld.c:35:
+c:\xilinx\14.7\ise_ds\edk\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/include/string.h:34:9: note: expected 'const char *' but argument is of type 'unsigned int *'
+../src/helloworld.c:72:2: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'unsigned int *'
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:83:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:87:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:88:10: error: expected '{' at end of input
+../src/helloworld.c:88:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:45:44 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:70:2: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xil_printf.h:9:0,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:74,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/helloworld.c:35:
+c:\xilinx\14.7\ise_ds\edk\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/include/string.h:31:8: note: expected 'char *' but argument is of type 'unsigned char *'
+../src/helloworld.c:72:2: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xil_printf.h:9:0,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:74,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/helloworld.c:35:
+c:\xilinx\14.7\ise_ds\edk\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/include/string.h:34:9: note: expected 'const char *' but argument is of type 'unsigned char *'
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:83:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:87:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:88:10: error: expected '{' at end of input
+../src/helloworld.c:88:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:45:58 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:69:2: error: unknown type name 'uint8_t'
+../src/helloworld.c:70:2: warning: passing argument 1 of 'strcpy' from incompatible pointer type [enabled by default]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xil_printf.h:9:0,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:74,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/helloworld.c:35:
+c:\xilinx\14.7\ise_ds\edk\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/include/string.h:31:8: note: expected 'char *' but argument is of type 'int *'
+../src/helloworld.c:72:2: warning: passing argument 1 of 'strlen' from incompatible pointer type [enabled by default]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xil_printf.h:9:0,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:74,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/helloworld.c:35:
+c:\xilinx\14.7\ise_ds\edk\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/include/string.h:34:9: note: expected 'const char *' but argument is of type 'int *'
+../src/helloworld.c:72:2: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'int *'
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:83:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:35:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:87:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:88:10: error: expected '{' at end of input
+../src/helloworld.c:88:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:46:15 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:2: warning: pointer targets in passing argument 1 of 'strcpy' differ in signedness [-Wpointer-sign]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xil_printf.h:9:0,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:74,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/helloworld.c:36:
+c:\xilinx\14.7\ise_ds\edk\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/include/string.h:31:8: note: expected 'char *' but argument is of type 'uint8_t *'
+../src/helloworld.c:73:2: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xil_printf.h:9:0,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:74,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/helloworld.c:36:
+c:\xilinx\14.7\ise_ds\edk\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/include/string.h:34:9: note: expected 'const char *' but argument is of type 'uint8_t *'
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:84:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:88:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:89:10: error: expected '{' at end of input
+../src/helloworld.c:89:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:46:54 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:2: error: too few arguments to function 'memcpy'
+../src/helloworld.c:73:2: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xil_printf.h:9:0,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:74,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/helloworld.c:36:
+c:\xilinx\14.7\ise_ds\edk\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/include/string.h:34:9: note: expected 'const char *' but argument is of type 'uint8_t *'
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:84:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:88:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:89:10: error: expected '{' at end of input
+../src/helloworld.c:89:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:47:16 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xil_printf.h:9:0,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:74,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/helloworld.c:36:
+c:\xilinx\14.7\ise_ds\edk\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/include/string.h:34:9: note: expected 'const char *' but argument is of type 'uint8_t *'
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:84:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:88:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:89:10: error: expected '{' at end of input
+../src/helloworld.c:89:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:47:35 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:2: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:74:2: error: expected ';' before 'int'
+../src/helloworld.c:75:43: error: 'bytesSent' undeclared (first use in this function)
+../src/helloworld.c:75:43: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:85:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:89:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:90:10: error: expected '{' at end of input
+../src/helloworld.c:90:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:47:40 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:2: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xil_printf.h:9:0,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:74,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/helloworld.c:36:
+c:\xilinx\14.7\ise_ds\edk\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/include/string.h:34:9: note: expected 'const char *' but argument is of type 'uint8_t *'
+../src/helloworld.c: In function 'sendBuffer':
+../src/helloworld.c:83:2: warning: passing argument 2 of 'XUartPs_Send' discards 'const' qualifier from pointer target type [enabled by default]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'const u8 *'
+../src/helloworld.c: In function 'receiveByte':
+../src/helloworld.c:87:2: error: expected declaration specifiers before 'XUartPs_Recv'
+../src/helloworld.c:88:10: error: expected '{' at end of input
+../src/helloworld.c:88:10: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:48:07 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:2: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xil_printf.h:9:0,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:74,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/helloworld.c:36:
+c:\xilinx\14.7\ise_ds\edk\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/include/string.h:34:9: note: expected 'const char *' but argument is of type 'uint8_t *'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27704	   1136	  29860	  58700	   e54c	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:49:36 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:39: error: 'buffer' undeclared (first use in this function)
+../src/helloworld.c:73:39: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:76:43: error: expected expression before ')' token
+../src/helloworld.c:76:43: error: too few arguments to function 'XUartPs_Recv'
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:455:14: note: declared here
+../src/helloworld.c:76:6: warning: unused variable 'bytesReceived' [-Wunused-variable]
+../src/helloworld.c:71:7: warning: unused variable 'recv_buffer' [-Wunused-variable]
+../src/helloworld.c:70:7: warning: unused variable 'send_buffer' [-Wunused-variable]
+../src/helloworld.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:49:42 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:59: error: 'buffer' undeclared (first use in this function)
+../src/helloworld.c:73:59: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:73:2: warning: pointer targets in passing argument 2 of 'XUartPs_Send' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:76:43: error: expected expression before ')' token
+../src/helloworld.c:76:43: error: too few arguments to function 'XUartPs_Recv'
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:455:14: note: declared here
+../src/helloworld.c:76:6: warning: unused variable 'bytesReceived' [-Wunused-variable]
+../src/helloworld.c:71:7: warning: unused variable 'recv_buffer' [-Wunused-variable]
+../src/helloworld.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:49:46 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: warning: pointer targets in passing argument 2 of 'XUartPs_Send' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:76:43: error: expected expression before ')' token
+../src/helloworld.c:76:43: error: too few arguments to function 'XUartPs_Recv'
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:455:14: note: declared here
+../src/helloworld.c:76:6: warning: unused variable 'bytesReceived' [-Wunused-variable]
+../src/helloworld.c:71:7: warning: unused variable 'recv_buffer' [-Wunused-variable]
+../src/helloworld.c:80:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+10:50:03 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: warning: pointer targets in passing argument 2 of 'XUartPs_Send' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:76:2: warning: pointer targets in passing argument 2 of 'XUartPs_Recv' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:455:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:76:6: warning: unused variable 'bytesReceived' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27748	   1136	  29860	  58744	   e578	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:50:16 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: warning: passing argument 2 of 'XUartPs_Send' makes pointer from integer without a cast [enabled by default]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'unsigned int'
+../src/helloworld.c:76:2: warning: pointer targets in passing argument 2 of 'XUartPs_Recv' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:455:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:76:6: warning: unused variable 'bytesReceived' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27748	   1136	  29860	  58744	   e578	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:50:26 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:39: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+../src/helloworld.c:73:2: warning: passing argument 2 of 'XUartPs_Send' makes pointer from integer without a cast [enabled by default]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'unsigned char'
+../src/helloworld.c:76:2: warning: pointer targets in passing argument 2 of 'XUartPs_Recv' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:455:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:76:6: warning: unused variable 'bytesReceived' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27756	   1136	  29860	  58752	   e580	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:50:33 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:2: warning: pointer targets in passing argument 2 of 'XUartPs_Recv' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:455:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:76:6: warning: unused variable 'bytesReceived' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27748	   1136	  29860	  58744	   e578	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:50:36 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:2: warning: pointer targets in passing argument 2 of 'XUartPs_Recv' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:455:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:76:6: warning: unused variable 'bytesReceived' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27748	   1136	  29860	  58744	   e578	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:50:47 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:2: warning: pointer targets in passing argument 2 of 'XUartPs_Recv' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:455:14: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:76:6: warning: unused variable 'bytesReceived' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27796	   1136	  29860	  58792	   e5a8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:50:51 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:2: warning: pointer targets in passing argument 2 of 'XUartPs_Recv' differ in signedness [-Wpointer-sign]
+In file included from ../src/helloworld.c:36:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:455:14: note: expected 'u8 *' but argument is of type 'char *'
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27796	   1136	  29860	  58792	   e5a8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:50:55 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27796	   1136	  29860	  58792	   e5a8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:51:00 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27796	   1136	  29860	  58792	   e5a8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:51:40 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27832	   1136	  29860	  58828	   e5cc	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:51:45 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:52:10 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27840	   1136	  29860	  58836	   e5d4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:52:14 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:53:31 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:6: warning: unused variable 'bytesSent' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27844	   1136	  29860	  58840	   e5d8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:53:34 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:53:58 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27840	   1136	  29860	  58836	   e5d4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+10:54:20 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:54:46 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:54:56 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:57:58 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:58:38 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:58:49 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:59:05 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+10:59:38 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:2: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27920	   1136	  29860	  58916	   e624	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:00:07 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27920	   1136	  29860	  58916	   e624	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:00:10 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:00:23 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27840	   1136	  29860	  58836	   e5d4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:01:25 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27820	   1136	  29860	  58816	   e5c0	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:08:27 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart_sendByte':
+../src/helloworld.c:85:1: error: expected '{' at end of input
+../src/helloworld.c:85:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:08:30 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:75:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:81:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c: In function 'uart_sendByte':
+../src/helloworld.c:85:1: error: expected '{' at end of input
+../src/helloworld.c:85:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:11:33 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:75:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:81:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c: In function 'uart0_sendByte':
+../src/helloworld.c:86:30: error: expected ')' before '->' token
+../src/helloworld.c:89:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:11:46 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:75:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:81:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c: In function 'uart0_sendByte':
+../src/helloworld.c:86:2: error: void value not ignored as it ought to be
+../src/helloworld.c:87:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:14:26 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:75:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:81:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c: In function 'uart0_sendByte':
+../src/helloworld.c:86:2: warning: passing argument 2 of 'XUartPs_Send' makes pointer from integer without a cast [enabled by default]
+In file included from ../src/helloworld.c:37:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'u8'
+make: *** [src/helloworld.o] Error 1
+11:14:37 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:75:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:81:32: error: 'recv_buffer' undeclared (first use in this function)
+make: *** [src/helloworld.o] Error 1
+11:15:35 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:71:16: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+../src/helloworld.c:72:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:72:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:76:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:82:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:7: warning: unused variable 'string' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+11:15:54 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:72:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:72:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:76:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:82:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:9: warning: unused variable 'string' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+11:16:45 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:74:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'int'
+../src/helloworld.c:74:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:74:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:78:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:84:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c:72:9: warning: unused variable 'string_len' [-Wunused-variable]
+../src/helloworld.c: In function 'uart0_sendBuffer':
+../src/helloworld.c:91:2: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [enabled by default]
+In file included from ../src/helloworld.c:37:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'u8 **'
+make: *** [src/helloworld.o] Error 1
+11:17:44 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'int'
+../src/helloworld.c:73:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:73:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:77:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:83:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:9: warning: unused variable 'string_len' [-Wunused-variable]
+../src/helloworld.c: In function 'uart0_sendBuffer':
+../src/helloworld.c:92:2: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [enabled by default]
+In file included from ../src/helloworld.c:37:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'u8 **'
+../src/helloworld.c:90:6: warning: unused variable 'bytes_sent' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+11:18:44 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'int'
+../src/helloworld.c:73:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:73:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:77:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:83:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:9: warning: unused variable 'string_len' [-Wunused-variable]
+../src/helloworld.c: In function 'uart0_sendBuffer':
+../src/helloworld.c:93:34: error: 'loop' undeclared (first use in this function)
+../src/helloworld.c:94:2: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [enabled by default]
+In file included from ../src/helloworld.c:37:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'u8 **'
+../src/helloworld.c:91:6: warning: unused variable 'timeout' [-Wunused-variable]
+../src/helloworld.c:95:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:19:08 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'int'
+../src/helloworld.c:73:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:73:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:77:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:83:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:9: warning: unused variable 'string_len' [-Wunused-variable]
+../src/helloworld.c: In function 'uart0_sendBuffer':
+../src/helloworld.c:97:2: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [enabled by default]
+In file included from ../src/helloworld.c:37:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'u8 **'
+make: *** [src/helloworld.o] Error 1
+11:20:15 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'int'
+../src/helloworld.c:73:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:73:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:77:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:83:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:9: warning: unused variable 'string_len' [-Wunused-variable]
+../src/helloworld.c: In function 'uart0_sendBuffer':
+../src/helloworld.c:94:3: warning: passing argument 2 of 'XUartPs_Send' makes pointer from integer without a cast [enabled by default]
+In file included from ../src/helloworld.c:37:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'u8'
+../src/helloworld.c:97:2: warning: passing argument 2 of 'XUartPs_Send' from incompatible pointer type [enabled by default]
+In file included from ../src/helloworld.c:37:0:
+../../system_bsp/ps7_cortexa9_0/include/xuartps.h:452:14: note: expected 'u8 *' but argument is of type 'u8 **'
+make: *** [src/helloworld.o] Error 1
+11:21:01 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'int'
+../src/helloworld.c:73:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:73:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:77:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:83:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:9: warning: unused variable 'string_len' [-Wunused-variable]
+../src/helloworld.c: In function 'uart0_sendBuffer':
+../src/helloworld.c:97:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:21:10 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'int'
+../src/helloworld.c:73:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:73:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:77:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:83:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:9: warning: unused variable 'string_len' [-Wunused-variable]
+../src/helloworld.c: In function 'uart0_sendBuffer':
+../src/helloworld.c:97:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:21:54 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'int'
+../src/helloworld.c:73:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:73:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:77:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:83:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:9: warning: unused variable 'string_len' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+11:22:27 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'int'
+../src/helloworld.c:73:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:73:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:77:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:83:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:9: warning: unused variable 'string_len' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+11:23:22 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'int'
+../src/helloworld.c:73:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:73:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:77:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:83:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:9: warning: unused variable 'string_len' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+11:23:59 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'int'
+../src/helloworld.c:73:45: error: 'send_buffer' undeclared (first use in this function)
+../src/helloworld.c:73:45: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:77:37: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:83:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c:71:9: warning: unused variable 'string_len' [-Wunused-variable]
+make: *** [src/helloworld.o] Error 1
+11:26:35 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:73:2: warning: implicit declaration of function 'uart0_sendBuffer' [-Wimplicit-function-declaration]
+../src/helloworld.c:74:43: error: 'bytesSent' undeclared (first use in this function)
+../src/helloworld.c:74:43: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:77:47: error: 'bytesReceived' undeclared (first use in this function)
+../src/helloworld.c:78:32: error: 'recv_buffer' undeclared (first use in this function)
+make: *** [src/helloworld.o] Error 1
+11:26:53 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:75:2: warning: pointer targets in passing argument 2 of 'uart0_sendBuffer' differ in signedness [-Wpointer-sign]
+../src/helloworld.c:45:5: note: expected 'u8 *' but argument is of type 'char *'
+../src/helloworld.c:76:43: error: 'bytesSent' undeclared (first use in this function)
+../src/helloworld.c:76:43: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:79:47: error: 'bytesReceived' undeclared (first use in this function)
+../src/helloworld.c:80:32: error: 'recv_buffer' undeclared (first use in this function)
+make: *** [src/helloworld.o] Error 1
+11:27:05 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:76:43: error: 'bytesSent' undeclared (first use in this function)
+../src/helloworld.c:76:43: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:79:47: error: 'bytesReceived' undeclared (first use in this function)
+../src/helloworld.c:80:32: error: 'recv_buffer' undeclared (first use in this function)
+make: *** [src/helloworld.o] Error 1
+11:28:03 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:47: error: 'bytesReceived' undeclared (first use in this function)
+../src/helloworld.c:77:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:78:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:112:43: error: 'data' undeclared (first use in this function)
+make: *** [src/helloworld.o] Error 1
+11:28:14 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:47: error: 'bytesReceived' undeclared (first use in this function)
+../src/helloworld.c:77:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:78:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:111:8: error: 'bytes_sent' undeclared (first use in this function)
+../src/helloworld.c:112:43: error: 'data' undeclared (first use in this function)
+../src/helloworld.c:108:6: warning: unused variable 'bytes_recv' [-Wunused-variable]
+../src/helloworld.c:117:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:28:29 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:47: error: 'bytesReceived' undeclared (first use in this function)
+../src/helloworld.c:77:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:78:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:112:3: error: 'bytes_sent' undeclared (first use in this function)
+../src/helloworld.c:112:43: error: 'data' undeclared (first use in this function)
+../src/helloworld.c:117:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:28:33 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:47: error: 'bytesReceived' undeclared (first use in this function)
+../src/helloworld.c:77:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:78:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:112:43: error: 'data' undeclared (first use in this function)
+../src/helloworld.c:112:50: error: 'bytes_sent' undeclared (first use in this function)
+../src/helloworld.c:117:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:28:44 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:47: error: 'bytesReceived' undeclared (first use in this function)
+../src/helloworld.c:77:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:78:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:112:3: warning: implicit declaration of function 'XUartPs_Receive' [-Wimplicit-function-declaration]
+../src/helloworld.c:112:46: error: 'data' undeclared (first use in this function)
+../src/helloworld.c:112:53: error: 'bytes_sent' undeclared (first use in this function)
+../src/helloworld.c:117:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:29:07 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:47: error: 'bytesReceived' undeclared (first use in this function)
+../src/helloworld.c:77:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:78:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:112:52: error: 'bytes_sent' undeclared (first use in this function)
+../src/helloworld.c:117:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:29:24 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:47: error: 'bytesReceived' undeclared (first use in this function)
+../src/helloworld.c:77:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:78:32: error: 'recv_buffer' undeclared (first use in this function)
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:116:10: error: 'bytes_sent' undeclared (first use in this function)
+../src/helloworld.c:117:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:29:30 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:77:47: error: 'bytesReceived' undeclared (first use in this function)
+../src/helloworld.c:77:47: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:78:32: error: 'recv_buffer' undeclared (first use in this function)
+make: *** [src/helloworld.o] Error 1
+11:29:54 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:79:47: error: 'bytesReceived' undeclared (first use in this function)
+../src/helloworld.c:79:47: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+11:30:21 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:80:2: error: too few arguments to function 'uart0_recvBuffer'
+../src/helloworld.c:46:5: note: declared here
+../src/helloworld.c:82:5: error: expected ';' before 'return'
+../src/helloworld.c:76:5: warning: unused variable 'recv_buffer' [-Wunused-variable]
+../src/helloworld.c:83:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:30:45 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:82:5: error: expected ';' before 'return'
+../src/helloworld.c:83:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:30:49 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27168	   1136	  29860	  58164	   e334	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:31:06 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27204	   1136	  29860	  58200	   e358	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:31:11 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:31:21 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:32:01 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27244	   1136	  29860	  58240	   e380	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:32:20 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:82:3: error: expected ')' before 'xil_printf'
+../src/helloworld.c:87:1: error: expected expression before '}' token
+../src/helloworld.c:87:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:32:24 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:81:2: warning: implicit declaration of function 'f' [-Wimplicit-function-declaration]
+../src/helloworld.c:82:3: error: expected ';' before 'xil_printf'
+make: *** [src/helloworld.o] Error 1
+11:32:34 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27284	   1136	  29860	  58280	   e3a8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:32:38 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:32:57 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:33:05 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:33:13 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:33:22 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:33:55 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27284	   1136	  29860	  58280	   e3a8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:34:00 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27284	   1136	  29860	  58280	   e3a8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:34:13 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:34:22 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:34:30 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:37:23 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27284	   1136	  29860	  58280	   e3a8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:38:01 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27264	   1136	  29860	  58260	   e394	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:38:09 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27244	   1136	  29860	  58240	   e380	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:38:17 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27244	   1136	  29860	  58240	   e380	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:38:55 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27244	   1136	  29860	  58240	   e380	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:39:22 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27248	   1136	  29860	  58244	   e384	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:39:49 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:86:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/helloworld.c:86:2: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/helloworld.c:89:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/helloworld.o] Error 1
+11:39:53 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:86:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/helloworld.c:86:2: note: use option -std=c99 or -std=gnu99 to compile your code
+make: *** [src/helloworld.o] Error 1
+11:40:16 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27252	   1136	  29860	  58248	   e388	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:40:48 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27284	   1136	  29860	  58280	   e3a8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:41:03 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27320	   1136	  29860	  58316	   e3cc	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:41:07 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27320	   1136	  29860	  58316	   e3cc	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:41:11 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:41:27 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:41:38 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27320	   1136	  29860	  58316	   e3cc	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:42:25 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27400	   1136	  29860	  58396	   e41c	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:42:28 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:42:46 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:43:00 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27432	   1136	  29860	  58428	   e43c	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:43:03 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:43:26 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27440	   1136	  29860	  58436	   e444	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:43:30 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:43:42 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:44:47 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27360	   1136	  29860	  58356	   e3f4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:44:50 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:46:44 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:125:3: warning: statement with no effect [-Wunused-value]
+../src/helloworld.c:125:22: error: expected ';' before 'XUartPs_RecvByte'
+make: *** [src/helloworld.o] Error 1
+11:46:47 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:125:3: warning: passing argument 1 of 'XUartPs_RecvByte' makes integer from pointer without a cast [enabled by default]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177:0,
+                 from ../src/helloworld.c:37:
+../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:422:4: note: expected 'u32' but argument is of type 'struct XUartPs *'
+../src/helloworld.c:125:3: error: too many arguments to function 'XUartPs_RecvByte'
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177:0,
+                 from ../src/helloworld.c:37:
+../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:422:4: note: declared here
+make: *** [src/helloworld.o] Error 1
+11:47:08 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:125:61: error: invalid type argument of '->' (have 'XUartPs_Config')
+make: *** [src/helloworld.o] Error 1
+11:47:12 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:125:62: error: invalid type argument of '->' (have 'XUartPs_Config')
+make: *** [src/helloworld.o] Error 1
+11:47:59 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:125:23: error: lvalue required as left operand of assignment
+make: *** [src/helloworld.o] Error 1
+11:48:08 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27352	   1136	  29860	  58348	   e3ec	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:50:08 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27332	   1136	  29860	  58328	   e3d8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:50:14 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27332	   1136	  29860	  58328	   e3d8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:50:29 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27344	   1136	  29860	  58340	   e3e4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:50:55 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:119:6: warning: unused variable 'timeout' [-Wunused-variable]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27316	   1136	  29860	  58312	   e3c8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:50:58 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27316	   1136	  29860	  58312	   e3c8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:53:36 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27292	   1136	  29860	  58288	   e3b0	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:53:48 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27292	   1136	  29860	  58288	   e3b0	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:53:50 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:54:06 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27372	   1136	  29860	  58368	   e400	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:54:10 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:54:25 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:54:40 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27372	   1136	  29860	  58368	   e400	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:54:43 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:55:07 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:55:28 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27364	   1136	  29860	  58360	   e3f8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:55:34 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:55:47 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:57:15 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_sendBuffer':
+../src/helloworld.c:102:10: error: 'BaseAddress' undeclared (first use in this function)
+../src/helloworld.c:102:10: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:102:48: error: 'timeout' undeclared (first use in this function)
+make: *** [src/helloworld.o] Error 1
+11:57:28 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_sendBuffer':
+../src/helloworld.c:102:68: error: 'timeout' undeclared (first use in this function)
+../src/helloworld.c:102:68: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+11:57:38 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27528	   1136	  29860	  58524	   e49c	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:57:41 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27528	   1136	  29860	  58524	   e49c	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:58:03 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27520	   1136	  29860	  58516	   e494	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:58:18 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27528	   1136	  29860	  58524	   e49c	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:58:59 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27548	   1136	  29860	  58544	   e4b0	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:59:02 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27548	   1136	  29860	  58544	   e4b0	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:59:18 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27372	   1136	  29860	  58368	   e400	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:59:21 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:00:07 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27372	   1136	  29860	  58368	   e400	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
