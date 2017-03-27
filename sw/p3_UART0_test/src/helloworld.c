@@ -58,7 +58,7 @@ int main()
 	 * Look up the configuration in the config table and then initialize it.
 	 */
 	Config = XUartPs_LookupConfig(XPAR_PS7_UART_0_DEVICE_ID);
-	if (NULL == Config) {
+	if (Config == NULL) {
 		return XST_FAILURE;
 	}
 	xil_printf("Look up Config Success\n");
@@ -67,26 +67,35 @@ int main()
 	if (status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
+
+	XUartPs_SetBaudRate(&uart0, 115200);
+
 	xil_printf("Initialize Config Success\n");
 
 	char * string = "Hello, World!";
 	size_t string_len = strlen(string);
 
 	u8 recv_buffer[256];
+	memset(recv_buffer, 0, sizeof(recv_buffer));
 
 	int bytes_sent = uart0_sendBuffer(&uart0, (u8*)string, string_len +1);
 	xil_printf("Sent %d bytes...\n", bytes_sent);
 
-	int bytes_recv = uart0_recvBuffer(&uart0, recv_buffer, string_len +1);
+	//sleep(3);
+
+	int bytes_recv = uart0_recvBuffer(&uart0, recv_buffer, string_len );
 	xil_printf("Received %d bytes..\n", bytes_recv);
 
-	sleep(3);
+
 	xil_printf("Message received = '");
 	size_t i;
-	for (i = 0; i < bytes_recv -1; ++i) {
-		xil_printf("%c", recv_buffer[i]);
+	for (i = 0; i < bytes_recv; ++i) {
+		xil_printf("%c ", recv_buffer[i]);
+		xil_printf("%x\n", recv_buffer[i]);
 	}
 	xil_printf("'\n");
+
+	xil_printf("%s", recv_buffer);
     return 0;
 }
 
@@ -98,8 +107,10 @@ int main()
 int uart0_sendBuffer(XUartPs *InstancePtr, u8 *data, size_t num_bytes) {
 	int bytes_sent = 0;
 
+
 	while(bytes_sent < num_bytes) {
 		XUartPs_SendByte(InstancePtr->Config.BaseAddress, data[bytes_sent]);
+		//XUartPs_WriteReg(InstancePtr->Config.BaseAddress, XUARTPS_FIFO_OFFSET, data[bytes_sent]);
 		bytes_sent++;
 	}
 
@@ -113,11 +124,19 @@ int uart0_sendBuffer(XUartPs *InstancePtr, u8 *data, size_t num_bytes) {
  */
 int uart0_recvBuffer(XUartPs *InstancePtr, u8 *buffer, size_t num_bytes) {
 	int bytes_recv = 0;
+	int iterations = 0;
 
-	while(bytes_recv < num_bytes) {
+	memset(buffer, 0, num_bytes);
+
+	while(iterations < 50000  && bytes_recv < num_bytes) {
+		xil_printf("iterations: %d\n", iterations);
 		buffer[bytes_recv] =  XUartPs_RecvByte(InstancePtr->Config.BaseAddress);
-		bytes_recv++;
+		//buffer[bytes_recv] = XUartPs_ReadReg(InstancePtr->Config.BaseAddress, XUARTPS_FIFO_OFFSET);
+		if(buffer[bytes_recv] != NULL) {
+			bytes_recv++;
+		}
+		iterations++;
 	}
 
-	return bytes_recv;
+	return ++bytes_recv;
 }

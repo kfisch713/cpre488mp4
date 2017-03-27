@@ -2907,3 +2907,2436 @@ arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
   27372	   1136	  29860	  58368	   e400	p3_UART0_test.elf
 'Finished building: p3_UART0_test.elf.size'
 ' '
+11:04:33 **** Build of project system_bsp ****
+make -k all 
+libgen -hw ../system_hw_platform/system.xml\
+	       \
+	       -pe ps7_cortexa9_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../system_hw_platform/system.xml -pe ps7_cortexa9_0
+-log libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=arm-xilinx-eabi-gcc"
+"ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS= -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+"Compiling common"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Compiling standalone"
+"Compiling gpio"
+"Compiling devcfg"
+"Compiling dmaps"
+"Compiling emacps"
+"Compiling gpiops"
+"Compiling qspips"
+"Compiling scugic"
+"Compiling scutimer"
+"Compiling scuwdt"
+"Compiling ttcps"
+"Compiling uartps"
+"Compiling usbps"
+"Compiling xadcps"
+"Compiling cpu_cortexa9"
+Running execs_generate.
+'Finished building libraries'
+11:05:50 **** Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27372	   1136	  29860	  58368	   e400	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:12:55 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:13:54 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:13:55 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:15:01 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27292	   1136	  29860	  58288	   e3b0	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:15:04 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:15:23 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:18:31 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:20:41 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:22:46 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:22:46 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:23:27 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:24:25 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27372	   1136	  29860	  58368	   e400	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:26:12 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27420	   1136	  29860	  58416	   e430	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:26:23 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:28:15 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27440	   1136	  29860	  58436	   e444	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:28:21 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:28:42 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27440	   1136	  29860	  58436	   e444	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:30:13 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:31:10 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:35:38 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:125:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27492	   1136	  29860	  58488	   e478	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:36:29 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:127:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28064	   1136	  29860	  59060	   e6b4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:36:34 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:37:00 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:38:16 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:38:32 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:127:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28064	   1136	  29860	  59060	   e6b4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:38:35 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:38:57 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:127:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28064	   1136	  29860	  59060	   e6b4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:38:58 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:39:53 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:127:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28068	   1136	  29860	  59064	   e6b8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:40:02 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:127:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28068	   1136	  29860	  59064	   e6b8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:40:04 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:42:59 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:128:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28072	   1136	  29860	  59068	   e6bc	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:43:05 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:43:25 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:128:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28072	   1136	  29860	  59068	   e6bc	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:43:26 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:44:34 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:128:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28056	   1136	  29860	  59052	   e6ac	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:44:36 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:45:37 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:128:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28064	   1136	  29860	  59060	   e6b4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:45:40 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:45:58 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:45:59 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:46:26 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:128:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28072	   1136	  29860	  59068	   e6bc	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:46:29 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:47:32 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:48:14 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:128:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28068	   1136	  29860	  59064	   e6b8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:49:41 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:129:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28068	   1136	  29860	  59064	   e6b8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:49:44 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:49:52 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:78:2: error: invalid initializer
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:129:25: warning: comparison between pointer and integer [enabled by default]
+make: *** [src/helloworld.o] Error 1
+11:50:20 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:129:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28100	   1136	  29860	  59096	   e6d8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:51:07 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:130:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28088	   1136	  29860	  59084	   e6cc	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:51:30 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:52:35 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:130:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28096	   1136	  29860	  59092	   e6d4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:53:01 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:53:16 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:53:30 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:53:31 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:56:51 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:130:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28108	   1136	  29860	  59104	   e6e0	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:57:11 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:57:34 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:58:10 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+11:59:24 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:130:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28100	   1136	  29860	  59096	   e6d8	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+11:59:33 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:130:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28096	   1136	  29860	  59092	   e6d4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:01:36 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:130:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28112	   1136	  29860	  59108	   e6e4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:01:39 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:02:06 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:130:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28120	   1136	  29860	  59116	   e6ec	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:02:09 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:02:47 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:130:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28120	   1136	  29860	  59116	   e6ec	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:02:50 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:03:09 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:130:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28120	   1136	  29860	  59116	   e6ec	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:03:45 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:130:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28112	   1136	  29860	  59108	   e6e4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:03:48 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:130:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28112	   1136	  29860	  59108	   e6e4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:03:53 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:04:22 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:130:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28032	   1136	  29860	  59028	   e694	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:04:25 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:04:49 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:132:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28112	   1136	  29860	  59108	   e6e4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:04:53 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:05:21 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:07:35 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:133:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28056	   1136	  29860	  59052	   e6ac	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:07:39 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:08:58 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:133:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28036	   1136	  29860	  59032	   e698	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:09:01 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:09:33 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:133:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28028	   1136	  29860	  59024	   e690	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:09:39 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:10:14 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:133:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28028	   1136	  29860	  59024	   e690	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:10:29 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:133:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28040	   1136	  29860	  59036	   e69c	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:10:33 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:11:18 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:135:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28064	   1136	  29860	  59060	   e6b4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:11:28 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:13:53 **** Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22872	   1096	  29780	  53748	   d1f4	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:14:57 **** Clean-only build of configuration Debug for project p3_UART0_test ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  p3_UART0_test.elf.size  p3_UART0_test.elf
+' '
+12:14:57 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:135:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28064	   1136	  29860	  59060	   e6b4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:15:21 **** Clean-only build of configuration Debug for project p3_UART0_test ****
+make clean 
+rm -rf  ./src/hello_quad_cities.o ./src/platform.o  ./src/hello_quad_cities.d ./src/platform.d  p3_UART0_test.elf.size  p3_UART0_test.elf
+' '
+12:15:22 **** Auto Build of configuration Debug for project p3_UART0_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart0_recvBuffer':
+../src/helloworld.c:135:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: p3_UART0_test.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_UART0_test.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28064	   1136	  29860	  59060	   e6b4	p3_UART0_test.elf
+'Finished building: p3_UART0_test.elf.size'
+' '
+12:15:36 **** Clean-only build of configuration Debug for project p3_BT_configure ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  p3_BT_configure.elf.size  p3_BT_configure.elf
+' '
+12:15:36 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22872	   1096	  29780	  53748	   d1f4	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:16:25 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:91:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25828	   1096	  29844	  56768	   ddc0	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:16:38 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:89:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25828	   1096	  29844	  56768	   ddc0	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:22:40 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'init_quad_cities':
+../src/hello_quad_cities.c:70:3: warning: 'return' with a value, in function returning void [enabled by default]
+../src/hello_quad_cities.c:76:3: warning: 'return' with a value, in function returning void [enabled by default]
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:117:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27744	   1136	  29860	  58740	   e574	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:23:25 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'init_quad_cities':
+../src/hello_quad_cities.c:74:3: warning: 'return' with a value, in function returning void [enabled by default]
+../src/hello_quad_cities.c:80:3: warning: 'return' with a value, in function returning void [enabled by default]
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:121:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27764	   1136	  29860	  58760	   e588	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:23:54 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c:64:5: error: conflicting types for 'init_quad_cities'
+../src/hello_quad_cities.c:46:6: note: previous declaration of 'init_quad_cities' was here
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:121:25: warning: comparison between pointer and integer [enabled by default]
+../src/hello_quad_cities.c: In function 'init_quad_cities':
+../src/hello_quad_cities.c:86:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/hello_quad_cities.o] Error 1
+12:23:59 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:121:25: warning: comparison between pointer and integer [enabled by default]
+../src/hello_quad_cities.c: In function 'init_quad_cities':
+../src/hello_quad_cities.c:86:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27700	   1136	  29860	  58696	   e548	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:24:32 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:125:25: warning: comparison between pointer and integer [enabled by default]
+../src/hello_quad_cities.c: In function 'init_quad_cities':
+../src/hello_quad_cities.c:90:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27720	   1136	  29860	  58716	   e55c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:30:22 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'main':
+../src/hello_quad_cities.c:60:5: error: invalid initializer
+../src/hello_quad_cities.c:61:30: error: 'command' undeclared (first use in this function)
+../src/hello_quad_cities.c:61:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/hello_quad_cities.c:60:12: warning: unused variable 'commad' [-Wunused-variable]
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:132:25: warning: comparison between pointer and integer [enabled by default]
+../src/hello_quad_cities.c: In function 'init_quad_cities':
+../src/hello_quad_cities.c:97:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/hello_quad_cities.o] Error 1
+12:30:42 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'main':
+../src/hello_quad_cities.c:61:30: error: 'command' undeclared (first use in this function)
+../src/hello_quad_cities.c:61:30: note: each undeclared identifier is reported only once for each function it appears in
+../src/hello_quad_cities.c:60:10: warning: unused variable 'commad' [-Wunused-variable]
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:132:25: warning: comparison between pointer and integer [enabled by default]
+../src/hello_quad_cities.c: In function 'init_quad_cities':
+../src/hello_quad_cities.c:97:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/hello_quad_cities.o] Error 1
+12:31:08 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'main':
+../src/hello_quad_cities.c:61:5: warning: pointer targets in passing argument 2 of 'uart0_sendBuffer' differ in signedness [-Wpointer-sign]
+../src/hello_quad_cities.c:44:5: note: expected 'u8 *' but argument is of type 'char *'
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:132:25: warning: comparison between pointer and integer [enabled by default]
+../src/hello_quad_cities.c: In function 'init_quad_cities':
+../src/hello_quad_cities.c:97:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27816	   1136	  29860	  58812	   e5bc	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:31:26 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'main':
+../src/hello_quad_cities.c:61:31: error: 'u' undeclared (first use in this function)
+../src/hello_quad_cities.c:61:31: note: each undeclared identifier is reported only once for each function it appears in
+../src/hello_quad_cities.c:61:33: error: expected expression before ')' token
+../src/hello_quad_cities.c:61:33: error: too few arguments to function 'uart0_sendBuffer'
+../src/hello_quad_cities.c:44:5: note: declared here
+../src/hello_quad_cities.c:60:10: warning: unused variable 'command' [-Wunused-variable]
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:132:25: warning: comparison between pointer and integer [enabled by default]
+../src/hello_quad_cities.c: In function 'init_quad_cities':
+../src/hello_quad_cities.c:97:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/hello_quad_cities.o] Error 1
+12:31:29 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'main':
+../src/hello_quad_cities.c:61:30: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+../src/hello_quad_cities.c:61:5: warning: passing argument 2 of 'uart0_sendBuffer' makes pointer from integer without a cast [enabled by default]
+../src/hello_quad_cities.c:44:5: note: expected 'u8 *' but argument is of type 'unsigned char'
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:132:25: warning: comparison between pointer and integer [enabled by default]
+../src/hello_quad_cities.c: In function 'init_quad_cities':
+../src/hello_quad_cities.c:97:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27824	   1136	  29860	  58820	   e5c4	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:31:35 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:132:25: warning: comparison between pointer and integer [enabled by default]
+../src/hello_quad_cities.c: In function 'init_quad_cities':
+../src/hello_quad_cities.c:97:1: warning: control reaches end of non-void function [-Wreturn-type]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27816	   1136	  29860	  58812	   e5bc	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:31:55 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:133:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27816	   1136	  29860	  58812	   e5bc	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:37:47 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:133:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27816	   1136	  29860	  58812	   e5bc	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:37:55 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:37:55 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+12:39:01 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:39:01 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+12:40:37 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:135:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27832	   1136	  29860	  58828	   e5cc	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:41:25 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:138:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27896	   1136	  29860	  58892	   e60c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:41:54 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:138:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27896	   1136	  29860	  58892	   e60c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:42:37 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:140:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27920	   1136	  29860	  58916	   e624	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:43:19 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:43:19 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+12:44:09 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:140:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27928	   1136	  29860	  58924	   e62c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:44:12 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:44:13 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+12:44:32 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:140:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27896	   1136	  29860	  58892	   e60c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:44:49 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:142:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27976	   1136	  29860	  58972	   e65c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:44:57 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:44:58 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+12:46:33 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:142:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  27996	   1136	  29860	  58992	   e670	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:47:01 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:47:02 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+12:49:37 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'main':
+../src/hello_quad_cities.c:72:6: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[128]' [-Wformat]
+../src/hello_quad_cities.c:72:6: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[128]' [-Wformat]
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:149:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83232	   2344	  30188	 115764	  1c434	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:49:53 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:149:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83232	   2344	  30188	 115764	  1c434	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:50:46 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'main':
+../src/hello_quad_cities.c:73:18: error: 'command' undeclared (first use in this function)
+../src/hello_quad_cities.c:73:18: note: each undeclared identifier is reported only once for each function it appears in
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:150:25: warning: comparison between pointer and integer [enabled by default]
+make: *** [src/hello_quad_cities.o] Error 1
+12:52:02 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'main':
+../src/hello_quad_cities.c:74:6: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[128]' [-Wformat]
+../src/hello_quad_cities.c:74:6: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[128]' [-Wformat]
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:151:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83216	   2344	  30188	 115748	  1c424	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:52:12 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'main':
+../src/hello_quad_cities.c:76:6: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[128]' [-Wformat]
+../src/hello_quad_cities.c:76:6: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'char (*)[128]' [-Wformat]
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:153:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83032	   2344	  30188	 115564	  1c36c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:52:20 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:153:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83032	   2344	  30188	 115564	  1c36c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:52:52 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:52:53 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+12:53:57 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:154:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83048	   2344	  30188	 115580	  1c37c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:54:23 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83072	   2344	  30188	 115604	  1c394	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:54:33 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:149:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83072	   2344	  30188	 115604	  1c394	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:54:41 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:54:41 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+12:55:06 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:55:07 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+12:56:08 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:149:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83072	   2344	  30188	 115604	  1c394	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:56:39 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:56:40 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+12:58:23 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:150:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83104	   2344	  30188	 115636	  1c3b4	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+12:58:49 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+12:58:50 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+13:00:39 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83176	   2344	  30188	 115708	  1c3fc	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:01:18 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+13:01:18 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+13:02:32 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+13:02:32 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+13:03:56 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83176	   2344	  30188	 115708	  1c3fc	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:04:23 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+13:04:24 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+13:06:58 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83176	   2344	  30188	 115708	  1c3fc	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:07:36 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83168	   2344	  30188	 115700	  1c3f4	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:08:01 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+13:08:02 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+13:09:05 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83168	   2344	  30188	 115700	  1c3f4	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:09:29 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+13:09:29 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+13:10:02 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83176	   2344	  30188	 115708	  1c3fc	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:10:12 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83176	   2344	  30188	 115708	  1c3fc	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:10:33 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+13:10:33 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+13:17:13 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'main':
+../src/hello_quad_cities.c:75:31: error: 'END' undeclared (first use in this function)
+../src/hello_quad_cities.c:75:31: note: each undeclared identifier is reported only once for each function it appears in
+../src/hello_quad_cities.c:75:5: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xil_printf.h:9:0,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:74,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/hello_quad_cities.c:37:
+c:\xilinx\14.7\ise_ds\edk\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/include/string.h:29:6: note: expected 'const char *' but argument is of type 'u8 *'
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+make: *** [src/hello_quad_cities.o] Error 1
+13:17:21 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'main':
+../src/hello_quad_cities.c:75:5: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xil_printf.h:9:0,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xil_io.h:74,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:78,
+                 from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177,
+                 from ../src/hello_quad_cities.c:37:
+c:\xilinx\14.7\ise_ds\edk\gnu\arm\nt\bin\../lib/gcc/arm-xilinx-eabi/4.7.3/../../../../arm-xilinx-eabi/include/string.h:29:6: note: expected 'const char *' but argument is of type 'u8 *'
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83224	   2344	  30188	 115756	  1c42c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:17:38 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83224	   2344	  30188	 115756	  1c42c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:18:39 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:156:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83192	   2344	  30188	 115724	  1c40c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:19:05 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+13:19:06 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+13:20:00 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:156:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83192	   2344	  30188	 115724	  1c40c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:20:34 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+13:20:35 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+13:21:21 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83224	   2344	  30188	 115756	  1c42c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:22:27 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83224	   2344	  30188	 115756	  1c42c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:22:34 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83224	   2344	  30188	 115756	  1c42c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:23:46 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83232	   2344	  30188	 115764	  1c434	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:24:10 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+13:24:11 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+13:25:45 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+13:25:46 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+13:27:42 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:155:25: warning: comparison between pointer and integer [enabled by default]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83224	   2344	  30188	 115756	  1c42c	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+13:27:46 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+13:27:47 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+13:58:56 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83328	   2344	  30188	 115860	  1c494	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+14:00:34 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83328	   2344	  30188	 115860	  1c494	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+14:00:39 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+14:00:40 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+14:00:57 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83328	   2344	  30188	 115860	  1c494	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+14:01:00 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+14:01:00 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+14:02:37 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+14:02:37 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+14:02:45 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+14:02:46 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+14:03:37 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+14:03:37 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+14:05:11 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:176:5: warning: implicit declaration of function 'XUartPs_ReadByte' [-Wimplicit-function-declaration]
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/hello_quad_cities.o: In function `uart0_recvBuffer':
+U:\Desktop\cpre488mp4\sw\p3_BT_configure\Debug/../src/hello_quad_cities.c:176: undefined reference to `XUartPs_ReadByte'
+collect2.exe: error: ld returned 1 exit status
+make: *** [p3_BT_configure.elf] Error 1
+14:05:13 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+14:05:14 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/hello_quad_cities.o: In function `uart0_recvBuffer':
+U:\Desktop\cpre488mp4\sw\p3_BT_configure\Debug/../src/hello_quad_cities.c:176: undefined reference to `XUartPs_ReadByte'
+collect2.exe: error: ld returned 1 exit status
+make: *** [p3_BT_configure.elf] Error 1
+14:05:32 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+../src/hello_quad_cities.c: In function 'uart0_recvBuffer':
+../src/hello_quad_cities.c:176:5: error: too many arguments to function 'XUartPs_RecvByte'
+In file included from ../../system_bsp/ps7_cortexa9_0/include/xuartps.h:177:0,
+                 from ../src/hello_quad_cities.c:37:
+../../system_bsp/ps7_cortexa9_0/include/xuartps_hw.h:422:4: note: declared here
+make: *** [src/hello_quad_cities.o] Error 1
+14:05:44 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83360	   2344	  30188	 115892	  1c4b4	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+14:06:15 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+14:06:15 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+14:07:33 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+14:07:33 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+14:08:24 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83384	   2344	  30188	 115916	  1c4cc	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+14:08:28 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+14:08:28 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.
+14:08:57 **** Auto Build of configuration Debug for project p3_BT_configure ****
+make all 
+'Building file: ../src/hello_quad_cities.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/hello_quad_cities.d" -MT"src/hello_quad_cities.d" -o "src/hello_quad_cities.o" "../src/hello_quad_cities.c"
+'Finished building: ../src/hello_quad_cities.c'
+' '
+'Building target: p3_BT_configure.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_BT_configure.elf"  ./src/hello_quad_cities.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p3_BT_configure.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p3_BT_configure.elf  |tee "p3_BT_configure.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83384	   2344	  30188	 115916	  1c4cc	p3_BT_configure.elf
+'Finished building: p3_BT_configure.elf.size'
+' '
+14:09:00 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+make all 
+make: Nothing to be done for `all'.
+14:09:01 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+make all 
+make: Nothing to be done for `all'.

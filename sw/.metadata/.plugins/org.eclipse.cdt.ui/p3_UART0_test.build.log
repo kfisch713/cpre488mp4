@@ -1,21 +1,6 @@
-12:00:07 **** Auto Build of configuration Debug for project p3_UART0_test ****
+14:09:00 **** Incremental Build of configuration Debug for project p3_UART0_test ****
 make all 
-'Building file: ../src/helloworld.c'
-'Invoking: ARM gcc compiler'
-arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: p3_UART0_test.elf'
-'Invoking: ARM gcc linker'
-arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p3_UART0_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: p3_UART0_test.elf'
-' '
-'Invoking: ARM Print Size'
-arm-xilinx-eabi-size p3_UART0_test.elf  |tee "p3_UART0_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  27372	   1136	  29860	  58368	   e400	p3_UART0_test.elf
-'Finished building: p3_UART0_test.elf.size'
-' '
+make: Nothing to be done for `all'.
 
-12:00:09 Build Finished (took 1s.840ms)
+14:09:01 Build Finished (took 180ms)
 
