@@ -428,3 +428,357 @@ No Target with ID 64 in the System
 	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
 
 14:10:31.588 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:15:40.596 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+14:15:46.434 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:15:46.534 INFO  - PS initialization will be done as it is not done before. 
+14:15:46.534 INFO  - Running PS initialization.... 
+14:15:46.964 INFO  - ps7_init is completed. 
+14:15:47.064 INFO  - ps7_post_config is completed. 
+14:15:47.174 INFO  - PS Initialization is complete. 
+14:17:40.292 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+14:17:44.130 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:17:44.230 INFO  - PS initialization will be done as it is not done before. 
+14:17:44.250 INFO  - Running PS initialization.... 
+14:17:44.670 INFO  - ps7_init is completed. 
+14:17:44.780 INFO  - ps7_post_config is completed. 
+14:17:44.880 INFO  - PS Initialization is complete. 
+14:25:45.244 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:26:14.872 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+14:26:21.411 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:26:21.511 INFO  - PS initialization will be done as it is not done before. 
+14:26:21.511 INFO  - Running PS initialization.... 
+14:26:21.941 INFO  - ps7_init is completed. 
+14:26:22.051 INFO  - ps7_post_config is completed. 
+14:26:22.161 INFO  - PS Initialization is complete. 
+14:29:47.693 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+14:29:52.349 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:29:52.349 INFO  - PS initialization will be done as it is not done before. 
+14:29:52.349 INFO  - Running PS initialization.... 
+14:29:52.779 INFO  - ps7_init is completed. 
+14:29:52.879 INFO  - ps7_post_config is completed. 
+14:29:52.989 INFO  - PS Initialization is complete. 
+14:36:52.901 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+14:36:59.289 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:36:59.389 INFO  - PS initialization will be done as it is not done before. 
+14:36:59.389 INFO  - Running PS initialization.... 
+14:36:59.829 INFO  - ps7_init is completed. 
+14:36:59.839 INFO  - ps7_post_config is completed. 
+14:36:59.939 INFO  - PS Initialization is complete. 
+14:40:03.181 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+14:40:35.734 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+14:40:44.293 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:40:44.403 INFO  - PS initialization will be done as it is not done before. 
+14:40:44.403 INFO  - Running PS initialization.... 
+14:40:44.833 INFO  - ps7_init is completed. 
+14:40:44.843 INFO  - ps7_post_config is completed. 
+14:40:44.953 INFO  - PS Initialization is complete. 
+14:42:41.677 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+14:43:04.726 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+14:43:08.504 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:43:08.504 INFO  - PS initialization will be done as it is not done before. 
+14:43:08.514 INFO  - Running PS initialization.... 
+14:43:08.944 INFO  - ps7_init is completed. 
+14:43:09.044 INFO  - ps7_post_config is completed. 
+14:43:09.154 INFO  - PS Initialization is complete. 
+14:43:56.669 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:43:58.744 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:44:29.335 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+14:44:33.440 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:44:33.540 INFO  - PS initialization will be done as it is not done before. 
+14:44:33.540 INFO  - Running PS initialization.... 
+14:44:33.970 INFO  - ps7_init is completed. 
+14:44:34.070 INFO  - ps7_post_config is completed. 
+14:44:34.180 INFO  - PS Initialization is complete. 
+14:51:09.016 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+14:51:16.392 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:51:16.502 INFO  - PS initialization will be done as it is not done before. 
+14:51:16.502 INFO  - Running PS initialization.... 
+14:51:16.932 INFO  - ps7_init is completed. 
+14:51:17.032 INFO  - ps7_post_config is completed. 
+14:51:17.132 INFO  - PS Initialization is complete. 
+14:53:17.362 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+14:53:19.998 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:56:56.829 INFO  - Processor reset is completed for ps7_cortexa9_0 
+14:58:29.007 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+15:01:38.136 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+15:01:42.024 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:01:42.124 INFO  - PS initialization will be done as it is not done before. 
+15:01:42.124 INFO  - Running PS initialization.... 
+15:01:42.554 INFO  - ps7_init is completed. 
+15:01:42.657 INFO  - ps7_post_config is completed. 
+15:01:42.767 INFO  - PS Initialization is complete. 
+15:03:33.895 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+15:03:37.407 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:03:37.517 INFO  - PS initialization will be done as it is not done before. 
+15:03:37.517 INFO  - Running PS initialization.... 
+15:03:37.947 INFO  - ps7_init is completed. 
+15:03:37.957 INFO  - ps7_post_config is completed. 
+15:03:37.967 INFO  - PS Initialization is complete. 
+15:05:04.163 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+15:05:12.086 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:05:39.604 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+15:05:44.422 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:05:44.522 INFO  - PS initialization will be done as it is not done before. 
+15:05:44.526 INFO  - Running PS initialization.... 
+15:05:44.957 INFO  - ps7_init is completed. 
+15:05:45.057 INFO  - ps7_post_config is completed. 
+15:05:45.057 INFO  - PS Initialization is complete. 
+15:08:42.238 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:09:12.132 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+15:09:16.496 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:09:16.596 INFO  - PS initialization will be done as it is not done before. 
+15:09:16.596 INFO  - Running PS initialization.... 
+15:09:17.036 INFO  - ps7_init is completed. 
+15:09:17.146 INFO  - ps7_post_config is completed. 
+15:09:17.246 INFO  - PS Initialization is complete. 
+15:15:04.038 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+15:15:10.173 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:15:10.173 INFO  - PS initialization will be done as it is not done before. 
+15:15:10.173 INFO  - Running PS initialization.... 
+15:15:10.603 INFO  - ps7_init is completed. 
+15:15:10.713 INFO  - ps7_post_config is completed. 
+15:15:10.823 INFO  - PS Initialization is complete. 
+15:17:31.580 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+15:17:37.498 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:17:37.598 INFO  - PS initialization will be done as it is not done before. 
+15:17:37.598 INFO  - Running PS initialization.... 
+15:17:38.018 INFO  - ps7_init is completed. 
+15:17:38.118 INFO  - ps7_post_config is completed. 
+15:17:38.118 INFO  - PS Initialization is complete. 
+15:18:24.733 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+15:18:49.223 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+15:18:54.861 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:18:54.971 INFO  - PS initialization will be done as it is not done before. 
+15:18:54.971 INFO  - Running PS initialization.... 
+15:18:55.391 INFO  - ps7_init is completed. 
+15:18:55.491 INFO  - ps7_post_config is completed. 
+15:18:55.601 INFO  - PS Initialization is complete. 
+15:20:03.991 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+15:20:12.455 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:20:12.565 INFO  - PS initialization will be done as it is not done before. 
+15:20:12.575 INFO  - Running PS initialization.... 
+15:20:13.015 INFO  - ps7_init is completed. 
+15:20:13.115 INFO  - ps7_post_config is completed. 
+15:20:13.115 INFO  - PS Initialization is complete. 
+15:22:07.518 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+15:22:11.986 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:22:12.096 INFO  - PS initialization will be done as it is not done before. 
+15:22:12.136 INFO  - Running PS initialization.... 
+15:22:12.576 INFO  - ps7_init is completed. 
+15:22:12.686 INFO  - ps7_post_config is completed. 
+15:22:12.706 INFO  - PS Initialization is complete. 
+15:24:00.621 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:24:27.829 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+15:24:33.629 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:24:33.734 INFO  - PS initialization will be done as it is not done before. 
+15:24:33.735 INFO  - Running PS initialization.... 
+15:24:34.170 INFO  - ps7_init is completed. 
+15:24:34.276 INFO  - ps7_post_config is completed. 
+15:24:34.382 INFO  - PS Initialization is complete. 
+15:57:41.162 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+15:57:45.779 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:57:45.879 INFO  - PS initialization will be done as it is not done before. 
+15:57:45.879 INFO  - Running PS initialization.... 
+15:57:46.309 INFO  - ps7_init is completed. 
+15:57:46.409 INFO  - ps7_post_config is completed. 
+15:57:46.519 INFO  - PS Initialization is complete. 
+15:59:44.192 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+15:59:51.101 INFO  - Processor reset is completed for ps7_cortexa9_0 
+15:59:51.211 INFO  - PS initialization will be done as it is not done before. 
+15:59:51.211 INFO  - Running PS initialization.... 
+15:59:51.641 INFO  - ps7_init is completed. 
+15:59:51.651 INFO  - ps7_post_config is completed. 
+15:59:51.751 INFO  - PS Initialization is complete. 
+16:04:30.523 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:04:55.894 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+16:05:01.762 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:05:01.872 INFO  - PS initialization will be done as it is not done before. 
+16:05:01.872 INFO  - Running PS initialization.... 
+16:05:02.302 INFO  - ps7_init is completed. 
+16:05:02.402 INFO  - ps7_post_config is completed. 
+16:05:02.512 INFO  - PS Initialization is complete. 
+16:06:47.637 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+16:06:52.944 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:06:53.054 INFO  - PS initialization will be done as it is not done before. 
+16:06:53.054 INFO  - Running PS initialization.... 
+16:06:53.484 INFO  - ps7_init is completed. 
+16:06:53.594 INFO  - ps7_post_config is completed. 
+16:06:53.694 INFO  - PS Initialization is complete. 
+16:09:20.166 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+16:09:24.105 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:09:24.205 INFO  - PS initialization will be done as it is not done before. 
+16:09:24.205 INFO  - Running PS initialization.... 
+16:09:24.635 INFO  - ps7_init is completed. 
+16:09:24.745 INFO  - ps7_post_config is completed. 
+16:09:24.855 INFO  - PS Initialization is complete. 
+16:10:08.858 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+16:10:15.480 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:10:15.580 INFO  - PS initialization will be done as it is not done before. 
+16:10:15.580 INFO  - Running PS initialization.... 
+16:10:16.010 INFO  - ps7_init is completed. 
+16:10:16.110 INFO  - ps7_post_config is completed. 
+16:10:16.210 INFO  - PS Initialization is complete. 
+16:14:26.728 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+16:14:26.728 WARN  - Terminating existing sessions on processor ps7_cortexa9_0 
+16:14:57.566 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+16:15:04.868 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:15:04.978 INFO  - PS initialization will be done as it is not done before. 
+16:15:04.978 INFO  - Running PS initialization.... 
+16:15:05.398 INFO  - ps7_init is completed. 
+16:15:05.498 INFO  - ps7_post_config is completed. 
+16:15:05.498 INFO  - PS Initialization is complete. 
+16:18:20.332 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:18:46.493 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+16:18:55.983 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:18:56.083 INFO  - PS initialization will be done as it is not done before. 
+16:18:56.083 INFO  - Running PS initialization.... 
+16:18:56.513 INFO  - ps7_init is completed. 
+16:18:56.623 INFO  - ps7_post_config is completed. 
+16:18:56.723 INFO  - PS Initialization is complete. 
+16:19:42.513 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:20:08.252 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+16:20:15.221 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:20:15.331 INFO  - PS initialization will be done as it is not done before. 
+16:20:15.331 INFO  - Running PS initialization.... 
+16:20:15.761 INFO  - ps7_init is completed. 
+16:20:15.861 INFO  - ps7_post_config is completed. 
+16:20:15.971 INFO  - PS Initialization is complete. 
+16:22:27.601 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+16:22:32.117 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:22:32.227 INFO  - PS initialization will be done as it is not done before. 
+16:22:32.227 INFO  - Running PS initialization.... 
+16:22:32.667 INFO  - ps7_init is completed. 
+16:22:32.777 INFO  - ps7_post_config is completed. 
+16:22:32.877 INFO  - PS Initialization is complete. 
+16:24:58.615 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:25:24.036 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+16:25:29.575 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:25:29.675 INFO  - PS initialization will be done as it is not done before. 
+16:25:29.675 INFO  - Running PS initialization.... 
+16:25:30.095 INFO  - ps7_init is completed. 
+16:25:30.195 INFO  - ps7_post_config is completed. 
+16:25:30.295 INFO  - PS Initialization is complete. 
+16:28:22.353 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+16:28:26.809 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:28:26.919 INFO  - PS initialization will be done as it is not done before. 
+16:28:26.919 INFO  - Running PS initialization.... 
+16:28:27.359 INFO  - ps7_init is completed. 
+16:28:27.459 INFO  - ps7_post_config is completed. 
+16:28:27.569 INFO  - PS Initialization is complete. 
+16:34:42.026 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+16:34:56.931 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:34:57.041 INFO  - PS initialization will be done as it is not done before. 
+16:34:57.041 INFO  - Running PS initialization.... 
+16:34:57.481 INFO  - ps7_init is completed. 
+16:34:57.581 INFO  - ps7_post_config is completed. 
+16:34:57.691 INFO  - PS Initialization is complete. 
+16:36:11.804 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:36:11.914 INFO  - PS initialization will be done as it is not done before. 
+16:36:11.914 INFO  - Running PS initialization.... 
+16:36:12.334 INFO  - ps7_init is completed. 
+16:36:12.444 INFO  - ps7_post_config is completed. 
+16:36:12.544 INFO  - PS Initialization is complete. 
+16:36:28.519 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:36:53.454 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+16:36:59.484 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:36:59.594 INFO  - PS initialization will be done as it is not done before. 
+16:36:59.594 INFO  - Running PS initialization.... 
+16:37:00.024 INFO  - ps7_init is completed. 
+16:37:00.124 INFO  - ps7_post_config is completed. 
+16:37:00.124 INFO  - PS Initialization is complete. 
+16:40:06.360 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+16:40:11.236 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:40:11.346 INFO  - PS initialization will be done as it is not done before. 
+16:40:11.346 INFO  - Running PS initialization.... 
+16:40:11.776 INFO  - ps7_init is completed. 
+16:40:11.876 INFO  - ps7_post_config is completed. 
+16:40:11.976 INFO  - PS Initialization is complete. 
+17:13:39.465 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+17:13:46.171 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:13:46.281 INFO  - PS initialization will be done as it is not done before. 
+17:13:46.281 INFO  - Running PS initialization.... 
+17:13:46.711 INFO  - ps7_init is completed. 
+17:13:46.811 INFO  - ps7_post_config is completed. 
+17:13:46.921 INFO  - PS Initialization is complete. 
+17:15:40.230 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+17:15:44.627 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:15:44.727 INFO  - PS initialization will be done as it is not done before. 
+17:15:44.727 INFO  - Running PS initialization.... 
+17:15:45.157 INFO  - ps7_init is completed. 
+17:15:45.257 INFO  - ps7_post_config is completed. 
+17:15:45.357 INFO  - PS Initialization is complete. 
+17:20:06.104 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+17:20:11.521 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:20:11.621 INFO  - PS initialization will be done as it is not done before. 
+17:20:11.621 INFO  - Running PS initialization.... 
+17:20:12.051 INFO  - ps7_init is completed. 
+17:20:12.161 INFO  - ps7_post_config is completed. 
+17:20:12.201 INFO  - PS Initialization is complete. 
+17:22:43.697 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+17:22:48.913 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:22:49.023 INFO  - PS initialization will be done as it is not done before. 
+17:22:49.023 INFO  - Running PS initialization.... 
+17:22:49.443 INFO  - ps7_init is completed. 
+17:22:49.553 INFO  - ps7_post_config is completed. 
+17:22:49.663 INFO  - PS Initialization is complete. 
+17:24:46.757 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:25:31.168 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+17:25:37.476 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:25:37.576 INFO  - PS initialization will be done as it is not done before. 
+17:25:37.587 INFO  - Running PS initialization.... 
+17:25:38.016 INFO  - ps7_init is completed. 
+17:25:38.116 INFO  - ps7_post_config is completed. 
+17:25:38.216 INFO  - PS Initialization is complete. 
+17:27:14.906 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:27:45.441 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+17:27:51.860 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:27:51.970 INFO  - PS initialization will be done as it is not done before. 
+17:27:51.970 INFO  - Running PS initialization.... 
+17:27:52.400 INFO  - ps7_init is completed. 
+17:27:52.500 INFO  - ps7_post_config is completed. 
+17:27:52.610 INFO  - PS Initialization is complete. 
+17:33:34.945 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+17:33:40.554 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:33:40.664 INFO  - PS initialization will be done as it is not done before. 
+17:33:40.664 INFO  - Running PS initialization.... 
+17:33:41.084 INFO  - ps7_init is completed. 
+17:33:41.194 INFO  - ps7_post_config is completed. 
+17:33:41.294 INFO  - PS Initialization is complete. 
+17:35:28.230 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:35:30.455 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:35:58.759 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:36:00.744 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:19:01.937 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+18:19:16.339 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:19:16.449 INFO  - PS initialization will be done as it is not done before. 
+18:19:16.449 INFO  - Running PS initialization.... 
+18:19:16.879 INFO  - ps7_init is completed. 
+18:19:16.979 INFO  - ps7_post_config is completed. 
+18:19:17.089 INFO  - PS Initialization is complete. 
+18:19:32.018 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:19:34.983 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:22:12.409 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:22:13.671 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:23:43.890 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:23:45.363 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:34:44.139 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:35:35.144 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:39:10.081 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:43:48.357 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:43:50.871 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:44:34.375 INFO  - FPGA Cable Disconnected. All active launches will be terminated. 
+18:44:34.375 WARN  - Terminating existing sessions on processor ps7_cortexa9_0 
+18:45:05.866 INFO  - FPGA configured successfully with bitstream "U:/Desktop/cpre488mp4/sw/system_hw_platform/system.bit" 
+18:45:11.478 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:45:11.578 INFO  - PS initialization will be done as it is not done before. 
+18:45:11.578 INFO  - Running PS initialization.... 
+18:45:12.008 INFO  - ps7_init is completed. 
+18:45:12.118 INFO  - ps7_post_config is completed. 
+18:45:12.218 INFO  - PS Initialization is complete. 
+18:46:55.586 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:47:00.740 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:49:28.491 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+18:49:28.505 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

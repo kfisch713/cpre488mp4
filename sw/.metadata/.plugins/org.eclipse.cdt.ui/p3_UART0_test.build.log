@@ -1,6 +1,6 @@
-14:09:00 **** Incremental Build of configuration Debug for project p3_UART0_test ****
+18:46:54 **** Incremental Build of configuration Debug for project p3_UART0_test ****
 make all 
 make: Nothing to be done for `all'.
 
-14:09:01 Build Finished (took 180ms)
+18:46:54 Build Finished (took 180ms)
 

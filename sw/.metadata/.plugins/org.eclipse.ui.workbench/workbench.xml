@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
-<window height="1047" maximized="true" width="974" x="2309" y="-22">
+<window height="1047" maximized="true" width="974" x="486" y="-16">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -33,33 +33,13 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="U:/Desktop/cpre488mp4/sw/p3_UART0_test/src/helloworld.c" title="helloworld.c" tooltip="p3_UART0_test/src/helloworld.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/p3_UART0_test/src/helloworld.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="46" selectionOffset="3842" selectionTopPixel="1567"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xuartps.c" partName="xuartps.c" path="U:/Desktop/cpre488mp4/sw/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c" title="xuartps.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="15495" selectionTopPixel="2431"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xuartps_hw.c" partName="xuartps_hw.c" path="U:/Desktop/cpre488mp4/sw/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.c" title="xuartps_hw.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="34" selectionOffset="4367" selectionTopPixel="1037"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="xuartps_hw.h" partName="xuartps_hw.h" path="U:/Desktop/cpre488mp4/sw/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.h" title="xuartps_hw.h" tooltip="system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="13416" selectionTopPixel="663"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="hello_quad_cities.c" partName="hello_quad_cities.c" path="U:/Desktop/cpre488mp4/sw/p3_BT_configure/src/hello_quad_cities.c" title="hello_quad_cities.c" tooltip="p3_BT_configure/src/hello_quad_cities.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/p3_BT_configure/src/hello_quad_cities.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5060" selectionTopPixel="2397"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="quad_commands.c" partName="quad_commands.c" path="U:/Desktop/cpre488mp4/sw/p4_quad_commands/src/quad_commands.c" title="quad_commands.c" tooltip="p4_quad_commands/src/quad_commands.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/p4_quad_commands/src/quad_commands.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5179" selectionTopPixel="2532"/>
 </editor>
 </editors>
 <views>
@@ -81,6 +61,11 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Infos (1 item)"/>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -180,7 +165,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.13018066" ratioLeft="245" ratioRight="1637" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottom" ratio="0.6852846" ratioLeft="638" ratioRight="293" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.726101" ratioLeft="676" ratioRight="255" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -211,162 +196,163 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/p3_UART0_test/src/helloworld.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/p3_BT_configure/src/hello_quad_cities.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/p4_quad_commands/src/quad_commands.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xuartps_hw.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xuartps.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_options.c"/>
 </editors>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1368" y="393"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="1739" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1781" y="630"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="1739" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2845" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2667" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2491" y="67"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
+<item historyLabel="hello_quad_cities.c" index="0">
 <position/>
 </item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2491" y="67"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
+<item historyLabel="hello_quad_cities.c" index="0">
 <position/>
 </item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="1991" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
+<item historyLabel="hello_quad_cities.c" index="0">
 <position/>
 </item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2050" y="0"/>
+<item historyLabel="hello_quad_cities.c" index="0">
+<position info="not_deleted" x="3664" y="0"/>
 </item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2049" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2095" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2096" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2666" y="0"/>
-</item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3019" y="30"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2666" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2065" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2319" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2572" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="1988" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="1989" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2346" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2347" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2416" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2448" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2496" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2486" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="2487" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="1">
+<item historyLabel="hello_quad_cities.c" index="0">
 <position/>
 </item>
-<item historyLabel="hello_quad_cities.c" index="1">
+<item historyLabel="hello_quad_cities.c" index="0">
+<position info="not_deleted" x="5358" y="0"/>
+</item>
+<item historyLabel="hello_quad_cities.c" index="0">
+<position info="not_deleted" x="5021" y="9"/>
+</item>
+<item historyLabel="hello_quad_cities.c" index="0">
+<position info="not_deleted" x="4521" y="0"/>
+</item>
+<item historyLabel="hello_quad_cities.c" index="0">
+<position info="not_deleted" x="4520" y="0"/>
+</item>
+<item historyLabel="hello_quad_cities.c" index="0">
+<position info="not_deleted" x="4521" y="0"/>
+</item>
+<item historyLabel="hello_quad_cities.c" index="0">
+<position info="not_deleted" x="5106" y="0"/>
+</item>
+<item historyLabel="hello_quad_cities.c" index="0">
+<position info="not_deleted" x="7072" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="8891" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="4329" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="4333" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="4339" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="5582" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
 <position/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="5582" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="4474" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="4479" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="4483" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="4515" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="4513" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="4562" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="5415" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="5549" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="6148" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="6146" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="4665" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="1651" y="8"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="5816" y="16"/>
+</item>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="7176" y="16"/>
 </item>
 <item historyLabel="xuartps_hw.c" index="2">
-<position info="not_deleted" x="3766" y="0"/>
-</item>
-<item historyLabel="xuartps_hw.c" index="2">
-<position info="not_deleted" x="4280" y="16"/>
+<position info="not_deleted" x="3665" y="0"/>
 </item>
 <item historyLabel="xuartps_hw.h" index="3">
-<position info="not_deleted" x="16025" y="16"/>
+<position info="not_deleted" x="15313" y="0"/>
 </item>
-<item historyLabel="xuartps_hw.h" index="3">
-<position info="not_deleted" x="15592" y="0"/>
+<item historyLabel="xuartps.c" index="4">
+<position info="not_deleted" x="13790" y="7"/>
 </item>
-<item historyLabel="xuartps_hw.c" index="2">
-<position info="not_deleted" x="4356" y="0"/>
+<item historyLabel="xuartps.h" index="5">
+<position info="not_deleted" x="17270" y="0"/>
 </item>
-<item historyLabel="xuartps_hw.h" index="3">
-<position info="not_deleted" x="2808" y="0"/>
+<item historyLabel="xuartps.c" index="4">
+<position info="not_deleted" x="13950" y="0"/>
 </item>
-<item historyLabel="xuartps_hw.h" index="4">
-<position info="not_deleted" x="15414" y="0"/>
+<item historyLabel="xuartps.h" index="5">
+<position info="not_deleted" x="17275" y="17"/>
 </item>
-<item historyLabel="xuartps_hw.h" index="3">
-<position info="not_deleted" x="2808" y="0"/>
+<item historyLabel="xuartps.c" index="4">
+<position info="not_deleted" x="13950" y="0"/>
 </item>
-<item historyLabel="xuartps.c" index="5">
-<position info="not_deleted" x="15495" y="0"/>
+<item historyLabel="xuartps.h" index="5">
+<position info="not_deleted" x="17275" y="17"/>
 </item>
-<item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3842" y="46"/>
+<item historyLabel="xuartps_options.c" index="6">
+<position info="not_deleted" x="4921" y="0"/>
 </item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="5201" y="16"/>
+<item historyLabel="xuartps_options.c" index="6">
+<position info="not_deleted" x="11855" y="17"/>
 </item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="5201" y="16"/>
+<item historyLabel="hello_quad_cities.c" index="0">
+<position info="not_deleted" x="7072" y="0"/>
 </item>
-<item historyLabel="xuartps_hw.c" index="2">
-<position info="not_deleted" x="4367" y="34"/>
+<item historyLabel="xuartps_options.c" index="6">
+<position info="not_deleted" x="11855" y="17"/>
 </item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="5201" y="16"/>
+<item historyLabel="quad_commands.c" index="1">
+<position/>
 </item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="4745" y="0"/>
+<item historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="7427" y="0"/>
 </item>
-<item historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="4712" y="0"/>
-</item>
-<item active="true" historyLabel="hello_quad_cities.c" index="1">
-<position info="not_deleted" x="4713" y="0"/>
+<item active="true" historyLabel="quad_commands.c" index="1">
+<position info="not_deleted" x="7430" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -388,6 +374,15 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xuartps.h" tooltip="system_bsp/ps7_cortexa9_0/include/xuartps.h">
+<persistable path="/system_bsp/ps7_cortexa9_0/include/xuartps.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="quad_commands.c" tooltip="p4_quad_commands/src/quad_commands.c">
+<persistable path="/p4_quad_commands/src/quad_commands.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xuartps_options.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_options.c">
+<persistable path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_options.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" tooltip="p3_BT_configure/src/helloworld.c">
 <persistable path="/p3_BT_configure/src/helloworld.c"/>
 </file>
@@ -409,9 +404,6 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" tooltip="p3_UART0_test/src/helloworld.c">
 <persistable path="/p3_UART0_test/src/helloworld.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xuartps.h" tooltip="system_bsp/ps7_cortexa9_0/include/xuartps.h">
-<persistable path="/system_bsp/ps7_cortexa9_0/include/xuartps.h"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="system_bsp/system.mss">
 <persistable path="/system_bsp/system.mss"/>
 </file>
@@ -426,12 +418,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" tooltip="system_hw_platform/system.xml">
 <persistable path="/system_hw_platform/system.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" tooltip="p3_UART0_test/src/platform.c">
-<persistable path="/p3_UART0_test/src/platform.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="echo_test.c" tooltip="p3_UART0_test/src/echo_test.c">
-<persistable path="/p3_UART0_test/src/echo_test.c"/>
 </file>
 </mruList>
 </workbench>
