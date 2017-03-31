@@ -34,7 +34,8 @@ entity system_stub is
     processing_system7_0_DDR_VRN : inout std_logic;
     processing_system7_0_DDR_VRP : inout std_logic;
     UART0_TX : out std_logic;
-    UART0_RX : in std_logic
+    UART0_RX : in std_logic;
+    axi_ppm_0_PCTX_IN : in std_logic
   );
 end system_stub;
 
@@ -67,7 +68,8 @@ architecture STRUCTURE of system_stub is
       processing_system7_0_DDR_VRN : inout std_logic;
       processing_system7_0_DDR_VRP : inout std_logic;
       UART0_TX : out std_logic;
-      UART0_RX : in std_logic
+      UART0_RX : in std_logic;
+      axi_ppm_0_PCTX_IN : in std_logic
     );
   end component;
 
@@ -103,7 +105,8 @@ begin
       processing_system7_0_DDR_VRN => processing_system7_0_DDR_VRN,
       processing_system7_0_DDR_VRP => processing_system7_0_DDR_VRP,
       UART0_TX => UART0_TX,
-      UART0_RX => UART0_RX
+      UART0_RX => UART0_RX,
+      axi_ppm_0_PCTX_IN => axi_ppm_0_PCTX_IN
     );
 
 end architecture STRUCTURE;

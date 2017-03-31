@@ -1,7 +1,8 @@
-U:\Documents\cpre488mp4\system\implementation\system.ngc 1490307237
-U:/Documents/cpre488mp4/system/implementation/system_processing_system7_0_wrapper.ngc 1490307218
-U:/Documents/cpre488mp4/system/implementation/system_axi4lite_0_wrapper.ngc 1490307224
-U:/Documents/cpre488mp4/system/implementation/system_sws_8bits_wrapper.ngc 1490307184
-U:/Documents/cpre488mp4/system/implementation/system_leds_8bits_wrapper.ngc 1490307195
-U:/Documents/cpre488mp4/system/implementation/system_btns_5bits_wrapper.ngc 1490307206
+U:\Documents\cpre488mp4\system\implementation\system.ngc 1490981991
+U:/Documents/cpre488mp4/system/implementation/system_processing_system7_0_wrapper.ngc 1490981944
+U:/Documents/cpre488mp4/system/implementation/system_axi_ppm_0_wrapper.ngc 1490981970
+U:/Documents/cpre488mp4/system/implementation/system_axi4lite_0_wrapper.ngc 1490981976
+U:/Documents/cpre488mp4/system/implementation/system_sws_8bits_wrapper.ngc 1490981910
+U:/Documents/cpre488mp4/system/implementation/system_leds_8bits_wrapper.ngc 1490981921
+U:/Documents/cpre488mp4/system/implementation/system_btns_5bits_wrapper.ngc 1490981932
 OK

@@ -75,11 +75,12 @@ Address Map for Processor processing_system7_0
   (0x41200000-0x4120ffff) SWs_8Bits	axi4lite_0
   (0x41220000-0x4122ffff) LEDs_8Bits	axi4lite_0
   (0x41240000-0x4124ffff) BTNs_5Bits	axi4lite_0
+  (0x7de00000-0x7de0ffff) axi_ppm_0	axi4lite_0
 
 Checking platform address map ...
 
 Checking platform configuration ...
-IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 3 slave(s) 
+IPNAME: axi_interconnect, INSTANCE: axi4lite_0 - 1 master(s) : 4 slave(s) 
 
 Checking port drivers...
 
@@ -154,24 +155,26 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:axi4lite_0 - U:\Documents\cpre488mp4\system\system.mhs line 42 -
+INSTANCE:axi4lite_0 - U:\Documents\cpre488mp4\system\system.mhs line 43 -
 Running XST synthesis
-INSTANCE:sws_8bits - U:\Documents\cpre488mp4\system\system.mhs line 50 - Running
+INSTANCE:sws_8bits - U:\Documents\cpre488mp4\system\system.mhs line 51 - Running
 XST synthesis
-INSTANCE:leds_8bits - U:\Documents\cpre488mp4\system\system.mhs line 65 -
+INSTANCE:leds_8bits - U:\Documents\cpre488mp4\system\system.mhs line 66 -
 Running XST synthesis
-INSTANCE:btns_5bits - U:\Documents\cpre488mp4\system\system.mhs line 80 -
+INSTANCE:btns_5bits - U:\Documents\cpre488mp4\system\system.mhs line 81 -
 Running XST synthesis
 INSTANCE:processing_system7_0 - U:\Documents\cpre488mp4\system\system.mhs line
-95 - Running XST synthesis
+96 - Running XST synthesis
+INSTANCE:axi_ppm_0 - U:\Documents\cpre488mp4\system\system.mhs line 185 -
+Running XST synthesis
 
 Running NGCBUILD ...
 IPNAME:system_axi4lite_0_wrapper INSTANCE:axi4lite_0 -
-U:\Documents\cpre488mp4\system\system.mhs line 42 - Running NGCBUILD
+U:\Documents\cpre488mp4\system\system.mhs line 43 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 75.00 seconds
+Total run time: 101.00 seconds

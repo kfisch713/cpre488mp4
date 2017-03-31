@@ -914,3 +914,117 @@ invalid command name "ps7_init"
 	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
 
 11:06:47.671 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:47:23.860 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\system.xml. 
+11:47:26.036 INFO  - The hardware specification for project 'system_hw_platform' is different from \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\system.xml. 
+11:47:26.773 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\system.xml into \system_hw_platform\system.xml. 
+11:47:27.414 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\system.bit into \system_hw_platform\system.bit. 
+11:47:28.711 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\ps7_init.c into \system_hw_platform\ps7_init.c. 
+11:47:29.702 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\ps7_init.h into \system_hw_platform\ps7_init.h. 
+11:47:29.995 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\ps7_init.html into \system_hw_platform\ps7_init.html. 
+11:47:30.036 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\ps7_init.tcl into \system_hw_platform\ps7_init.tcl. 
+11:47:30.214 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+11:47:32.041 INFO  - Updating hardware inferred compiler options for p3_BT_configure. 
+11:47:32.807 INFO  - Updating hardware inferred compiler options for p3_UART0_test. 
+11:47:33.570 INFO  - Updating hardware inferred compiler options for p4_quad_commands. 
+11:47:33.586 INFO  - Clearing existing target manager status. 
+11:47:35.767 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+11:48:23.918 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488mp4/sw/system_hw_platform/system.bit" 
+11:49:39.304 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:49:39.404 INFO  - PS initialization will be done as it is not done before. 
+11:49:39.404 INFO  - Running PS initialization.... 
+11:49:39.836 INFO  - ps7_init is completed. 
+11:49:39.936 INFO  - ps7_post_config is completed. 
+11:49:40.036 INFO  - PS Initialization is complete. 
+12:12:03.653 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:12:03.653 INFO  - PS initialization will be done as it is not done before. 
+12:12:03.663 INFO  - Running PS initialization.... 
+12:12:04.093 INFO  - ps7_init is completed. 
+12:12:04.193 INFO  - ps7_post_config is completed. 
+12:12:04.293 INFO  - PS Initialization is complete. 
+12:12:16.098 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488mp4/sw/system_hw_platform/system.bit" 
+12:12:16.118 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Invalid Target ID
+    Target '64' Does NOT exist in the Current System
+
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+12:12:53.352 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:13:13.227 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:30:49.670 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:32:27.129 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+12:42:19.675 INFO  - Processing command line option -hwspec \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\system.xml. 
+12:42:21.869 INFO  - The hardware specification for project 'system_hw_platform' is different from \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\system.xml. 
+12:42:22.809 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\system.xml into \system_hw_platform\system.xml. 
+12:42:23.443 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\system.bit into \system_hw_platform\system.bit. 
+12:42:25.649 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\ps7_init.c into \system_hw_platform\ps7_init.c. 
+12:42:25.669 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\ps7_init.h into \system_hw_platform\ps7_init.h. 
+12:42:25.839 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\ps7_init.html into \system_hw_platform\ps7_init.html. 
+12:42:25.869 INFO  - Copied contents of \\my.files.iastate.edu\users\burneykb\Documents\cpre488mp4\system\SDK\SDK_Export\hw\ps7_init.tcl into \system_hw_platform\ps7_init.tcl. 
+12:42:26.108 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+12:43:48.960 INFO  - Updating hardware inferred compiler options for p3_BT_configure. 
+12:43:49.729 INFO  - Updating hardware inferred compiler options for p3_UART0_test. 
+12:43:50.483 INFO  - Updating hardware inferred compiler options for p4_quad_commands. 
+12:43:51.244 INFO  - Updating hardware inferred compiler options for p5_PPM_BT_passthrough. 
+12:43:51.254 INFO  - Clearing existing target manager status. 
+12:43:53.466 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+12:45:51.643 INFO  - Settings changed on project system_bsp. Triggering a rebuild... 
+12:46:02.494 INFO  - Refreshed build settings on project p3_BT_configure 
+12:46:02.514 INFO  - Refreshed build settings on project p3_UART0_test 
+12:46:02.534 INFO  - Refreshed build settings on project p4_quad_commands 
+12:46:02.544 INFO  - Refreshed build settings on project p5_PPM_BT_passthrough 
+12:46:26.676 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488mp4/sw/system_hw_platform/system.bit" 
+12:47:21.124 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:47:21.224 INFO  - PS initialization will be done as it is not done before. 
+12:47:21.224 INFO  - Running PS initialization.... 
+12:47:21.714 INFO  - ps7_init is completed. 
+12:47:21.824 INFO  - ps7_post_config is completed. 
+12:47:21.933 INFO  - PS Initialization is complete. 
+12:53:41.679 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:08:22.708 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:10:16.168 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:12:24.619 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:12:57.189 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:19:00.354 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:19:02.035 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:20:13.023 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:20:14.546 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:22:57.781 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:23:56.252 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:27:12.236 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:28:59.426 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:29:05.959 ERROR - Port COM19 is already in use. 
+13:29:06.359 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:29:10.300 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+13:29:27.541 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:29:45.293 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:29:46.858 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:31:57.988 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:32:18.238 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:33:13.507 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488mp4/sw/system_hw_platform/system.bit" 
+13:33:53.088 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:33:53.198 INFO  - PS initialization will be done as it is not done before. 
+13:33:53.198 INFO  - Running PS initialization.... 
+13:33:53.638 INFO  - ps7_init is completed. 
+13:33:53.738 INFO  - ps7_post_config is completed. 
+13:33:53.838 INFO  - PS Initialization is complete. 
+13:34:38.091 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:35:13.589 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:36:25.651 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:39:04.881 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:39:13.042 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:39:15.570 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:40:24.291 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:40:25.743 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:41:30.076 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:41:31.959 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:44:06.500 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:47:35.528 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+13:47:36.997 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:48:59.738 INFO  - Processor reset is completed for ps7_cortexa9_0 
+13:50:10.080 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

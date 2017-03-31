@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Mar 23 17:15:07 2017
+Fri Mar 31 12:41:21 2017
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -467,7 +467,7 @@ Pinout by Pin Number:
 |W5        |                                    |IOB33S   |IO_L24N_T3_13          |UNUSED   |                 |13            |          |         |           |         |         |          |           |                |
 |W6        |                                    |IOB33M   |IO_L24P_T3_13          |UNUSED   |                 |13            |          |         |           |         |         |          |           |                |
 |W7        |                                    |IOB33S   |IO_L23N_T3_13          |UNUSED   |                 |13            |          |         |           |         |         |          |           |                |
-|W8        |                                    |IOB33S   |IO_L2N_T0_13           |UNUSED   |                 |13            |          |         |           |         |         |          |           |                |
+|W8        |axi_ppm_0_PCTX_IN                   |IOB33    |IO_L2N_T0_13           |INPUT    |LVCMOS33         |13            |          |         |           |NONE     |         |LOCATED   |YES        |NONE            |
 |W9        |                                    |         |GND                    |         |                 |              |          |         |           |         |         |          |           |                |
 |W10       |                                    |IOB33S   |IO_L3N_T0_DQS_13       |UNUSED   |                 |13            |          |         |           |         |         |          |           |                |
 |W11       |                                    |IOB33M   |IO_L3P_T0_DQS_13       |UNUSED   |                 |13            |          |         |           |         |         |          |           |                |
