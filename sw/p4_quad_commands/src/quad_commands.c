@@ -42,7 +42,7 @@
 XUartPs uart0;		/* The instance of the UART Driver */
 
 
-#define QUAD 4      /*  ***************  MODIFTY THIS VALUE WHEN SWITCHING TO A DIFFERENT QUAD  ************** */
+#define QUAD 2      /*  ***************  MODIFTY THIS VALUE WHEN SWITCHING TO A DIFFERENT QUAD  ************** */
 
 
 #define QUAD_NUM QUAD-1
@@ -126,25 +126,25 @@ int main()
     }
 
     // We want to program the chip. Then we can quickly restart and do a real run without this call
-    set_up_bt_chip();
+//    set_up_bt_chip();
 
     while (!SW(KILL_SWITCH)) {
 
     	if (SW(INPUT_MODE_SWITCH)) {
+
+//    		send_command(&uart0, "get_imu", 7);
+//    		send_command(&uart0, "get_attitude", 12);
+
     		if (SW(ARM_SWITCH)) send_command(&uart0, "arm", 3);
 			else				send_command(&uart0, "disarm", 6);
-
-    		send_command(&uart0, "get_imu", 7);
-    		send_command(&uart0, "get_attitude", 12);
     	} else {
     		xil_printf("\r\n>>>");
 			scanf("%s", command);
 			if (was_quit_command(command)) return 0;
 			if (!SW(INPUT_MODE_SWITCH))
 				send_command(&uart0, command, strlen(command));
+	    	memset(command, 0, sizeof(command));
     	}
-
-    	memset(command, 0, sizeof(command));
     }
     xil_printf("quiting program...\n");
     return 0;
@@ -167,60 +167,70 @@ int send_command(XUartPs * uart, char* command, size_t command_len) {
 	if (strcmp(command, "test_quad") == 0) {
 		memcpy(send_buff, test_quad, 6);
 		len = 6;
-	} else if (strncmp(command, "$$$", 3) == 0) {
-		memcpy(send_buff, command, strlen(command));
-		len = strlen(command);
-	} else if (strncmp(command, "arm", 3) == 0) {
-		create_arm_packet(send_buff);
-		len = 22;
-	} else if (strncmp(command, "disarm", 6) == 0) {
-		create_disarm_packet(send_buff);
-		len = 22;
-	} else if (strncmp(command, "get_imu", 7) == 0) {
-		create_get_imu_packet(send_buff);
-		len = 22;
-	} else if (strncmp(command, "get_attitude", 12) == 0) {
-		create_get_attitude_packet(send_buff);
-		len = 22;
-	} else {
-		strcpy((char*)send_buff, command);
-		strcat((char*)send_buff, "\r");
-		len = strlen((char*)send_buff);
-		xil_printf("sending AT command : %d %s\n", len, send_buff);
-	}
 
-	uart0_sendBuffer(uart, send_buff, len);
-	uart0_recvBuffer(uart, recv_buff, 512);
+		uart0_sendBuffer(uart, send_buff, len);
+		uart0_recvBuffer(uart, recv_buff, 512);
 
-	if (strcmp(command, "test_quad") == 0) {
 		xil_printf("Quad response... \n");
 		for (i = 0; i < 12; ++i) {
 			xil_printf("0x%2X ", recv_buff[i]);
 		}
 		xil_printf("\n");
-	} else if (strcmp(command, "arm") == 0) {
+	} else if (strncmp(command, "$$$", 3) == 0) {
+		memcpy(send_buff, command, strlen(command));
+		len = strlen(command);
+
+		uart0_sendBuffer(uart, send_buff, len);
+		uart0_recvBuffer(uart, recv_buff, 512);
+	} else if (strncmp(command, "arm", 3) == 0) {
+		create_arm_packet(send_buff);
+		len = 22;
+
+		uart0_sendBuffer(uart, send_buff, len);
+		uart0_recvBuffer(uart, recv_buff, 512);
+
 		xil_printf("arming\n");
-	} else if (strcmp(command, "disarm") == 0) {
+	} else if (strncmp(command, "disarm", 6) == 0) {
+		create_disarm_packet(send_buff);
+		len = 22;
+
+		uart0_sendBuffer(uart, send_buff, len);
+		uart0_recvBuffer(uart, recv_buff, 512);
+
 		xil_printf("disarming\n");
-	} else if (strcmp(command, "get_imu") == 0) {
-		xil_printf("IMU : ");
-		for (i = 0; i < 18 + DATA_START; ++i) {
-			xil_printf("0x%X ", recv_buff[i]);
-		}
-		xil_printf("\n");
-	} else if (strcmp(command, "get_attitude") == 0) {
-		xil_printf("ATTITUDE : ");
-		for (i = 0; i < 6 + DATA_START; ++i) {
-			xil_printf("0x%X ", recv_buff[i]);
-		}
-		xil_printf("\n");
+	} else if (strncmp(command, "get_imu", 7) == 0) {
+		create_get_imu_packet(send_buff);
+		len = 6;
+
+		uart0_sendBuffer(uart, send_buff, len);
+		uart0_recvBuffer(uart, recv_buff, 512);
+
+		xil_printf("IMU : ACCX  %5d  ACCY  %5d  ACCZ  %5d  GYRX  %5d  GYRY  %5d  GYRZ  %5d  MAGX  %5d  MAGY  %5d  MAGZ  %5d\n",
+				(int16_t)BytesTo16(recv_buff[5],recv_buff[6]), (int16_t)BytesTo16(recv_buff[7],recv_buff[8]), (int16_t)BytesTo16(recv_buff[9],recv_buff[10]),
+				(int16_t)BytesTo16(recv_buff[11],recv_buff[12]), (int16_t)BytesTo16(recv_buff[13],recv_buff[14]), (int16_t)BytesTo16(recv_buff[15],recv_buff[16]),
+				(int16_t)BytesTo16(recv_buff[17],recv_buff[18]), (int16_t)BytesTo16(recv_buff[19],recv_buff[20]), (int16_t)BytesTo16(recv_buff[21],recv_buff[22]));
+	} else if (strncmp(command, "get_attitude", 12) == 0) {
+		create_get_attitude_packet(send_buff);
+		len = 6;
+
+		uart0_sendBuffer(uart, send_buff, len);
+		uart0_recvBuffer(uart, recv_buff, 512);
+		xil_printf("ATTITUDE : ANGX  %5d  ANGY %5d  HEADING %5d\n",
+				(int16_t)BytesTo16(recv_buff[5],recv_buff[6]), (int16_t)BytesTo16(recv_buff[7],recv_buff[8]), (int16_t)BytesTo16(recv_buff[9],recv_buff[10]));
 	} else {
+		strcpy((char*)send_buff, command);
+		strcat((char*)send_buff, "\r");
+		len = strlen((char*)send_buff);
+		xil_printf("sending AT command : %d %s\n", len, send_buff);
+
+		uart0_sendBuffer(uart, send_buff, len);
+		uart0_recvBuffer(uart, recv_buff, 512);
+
 		xil_printf("%s\n", recv_buff);
 	}
 
 	return 0;
 }
-
 
 int was_quit_command(char * command) {
 	if (strncmp(command, "quit", 4) == 0) {
@@ -406,7 +416,6 @@ int create_disarm_packet(u8 * buff) {
 //	xil_printf("\n");
 	return 0;
 }
-
 int create_get_imu_packet(u8 * buff) {
 	buff[PREAMBLE] = '$';
 	buff[PREAMBLE + 1] = 'M';
@@ -425,7 +434,6 @@ int create_get_attitude_packet(u8 * buff) {
 	buff[DATA_START] = calc_checksum(buff);
 	return 0;
 }
-
 uint8_t calc_checksum(u8 * buff) {
 	size_t i;
 	uint8_t crc = 0;
@@ -434,7 +442,6 @@ uint8_t calc_checksum(u8 * buff) {
 	}
 	return crc;
 }
-
 int set_up_bt_chip() {
 	char buff[128];
 	sleep(1);

@@ -5451,3 +5451,273 @@ java.io.FileNotFoundException: U:\Documents\cpre488mp4\sw\.metadata\.plugins\org
 	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2375)
 	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$5.run(IDEWorkbenchAdvisor.java:508)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SESSION 2017-03-31 09:54:40.221 -----------------------------------------------
+eclipse.buildId=Release 14.7 Build SDK_P.20131013
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 4 568 2017-03-31 10:01:13.516
+!MESSAGE Could not write metadata for '/system_hw_platform'.
+!STACK 0
+java.io.FileNotFoundException: U:\Documents\cpre488mp4\sw\.metadata\.plugins\org.eclipse.core.resources\.projects\system_hw_platform\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 4 568 2017-03-31 10:09:50.410
+!MESSAGE Could not write metadata for '/system_hw_platform'.
+!STACK 0
+java.io.FileNotFoundException: U:\Documents\cpre488mp4\sw\.metadata\.plugins\org.eclipse.core.resources\.projects\system_hw_platform\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 4 568 2017-03-31 10:14:54.711
+!MESSAGE Could not write metadata for '/system_hw_platform'.
+!STACK 0
+java.io.FileNotFoundException: U:\Documents\cpre488mp4\sw\.metadata\.plugins\org.eclipse.core.resources\.projects\system_hw_platform\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 4 568 2017-03-31 10:19:56.392
+!MESSAGE Could not write metadata for '/system_hw_platform'.
+!STACK 0
+java.io.FileNotFoundException: U:\Documents\cpre488mp4\sw\.metadata\.plugins\org.eclipse.core.resources\.projects\system_hw_platform\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 4 568 2017-03-31 10:25:01.126
+!MESSAGE Could not write metadata for '/system_hw_platform'.
+!STACK 0
+java.io.FileNotFoundException: U:\Documents\cpre488mp4\sw\.metadata\.plugins\org.eclipse.core.resources\.projects\system_hw_platform\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 4 568 2017-03-31 10:33:17.051
+!MESSAGE Could not write metadata for '/system_hw_platform'.
+!STACK 0
+java.io.FileNotFoundException: U:\Documents\cpre488mp4\sw\.metadata\.plugins\org.eclipse.core.resources\.projects\system_hw_platform\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 4 568 2017-03-31 10:38:59.888
+!MESSAGE Could not write metadata for '/system_hw_platform'.
+!STACK 0
+java.io.FileNotFoundException: U:\Documents\cpre488mp4\sw\.metadata\.plugins\org.eclipse.core.resources\.projects\system_hw_platform\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 4 568 2017-03-31 10:44:02.866
+!MESSAGE Could not write metadata for '/system_hw_platform'.
+!STACK 0
+java.io.FileNotFoundException: U:\Documents\cpre488mp4\sw\.metadata\.plugins\org.eclipse.core.resources\.projects\system_hw_platform\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 4 568 2017-03-31 10:50:10.670
+!MESSAGE Could not write metadata for '/system_hw_platform'.
+!STACK 0
+java.io.FileNotFoundException: U:\Documents\cpre488mp4\sw\.metadata\.plugins\org.eclipse.core.resources\.projects\system_hw_platform\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 4 568 2017-03-31 10:56:10.304
+!MESSAGE Could not write metadata for '/system_hw_platform'.
+!STACK 0
+java.io.FileNotFoundException: U:\Documents\cpre488mp4\sw\.metadata\.plugins\org.eclipse.core.resources\.projects\system_hw_platform\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.resources 4 568 2017-03-31 11:02:44.354
+!MESSAGE Could not write metadata for '/system_hw_platform'.
+!STACK 0
+java.io.FileNotFoundException: U:\Documents\cpre488mp4\sw\.metadata\.plugins\org.eclipse.core.resources\.projects\system_hw_platform\.markers.snap (The system cannot find the path specified)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1685)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSnap(SaveManager.java:1768)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1167)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui.ide 4 4 2017-03-31 11:06:47.584
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2017-03-31 11:06:47.593
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 4 568 2017-03-31 11:06:47.593
+!MESSAGE Could not write metadata for '/system_hw_platform'.
+!STACK 0
+java.io.FileNotFoundException: U:\Documents\cpre488mp4\sw\.metadata\.plugins\org.eclipse.core.resources\.projects\system_hw_platform\.markers (The system cannot find the path specified)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeFileOutputStream.<init>(SafeFileOutputStream.java:51)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1576)
+	at org.eclipse.core.internal.resources.SaveManager.visitAndSave(SaveManager.java:1656)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1142)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2375)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$5.run(IDEWorkbenchAdvisor.java:508)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.debug.core 4 0 2017-03-31 11:06:47.755
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.debug.core.DebugPlugin.stop() of bundle org.eclipse.debug.core.
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:791)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+Caused by: java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.stopRun(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.RemoteProcess.terminate(Unknown Source)
+	at org.eclipse.debug.core.Launch.terminate(Launch.java:252)
+	at org.eclipse.debug.internal.core.LaunchManager.shutdown(LaunchManager.java:2359)
+	at org.eclipse.debug.core.DebugPlugin.stop(DebugPlugin.java:622)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	... 19 more
+Root exception:
+java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.stopRun(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.RemoteProcess.terminate(Unknown Source)
+	at org.eclipse.debug.core.Launch.terminate(Launch.java:252)
+	at org.eclipse.debug.internal.core.LaunchManager.shutdown(LaunchManager.java:2359)
+	at org.eclipse.debug.core.DebugPlugin.stop(DebugPlugin.java:622)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)

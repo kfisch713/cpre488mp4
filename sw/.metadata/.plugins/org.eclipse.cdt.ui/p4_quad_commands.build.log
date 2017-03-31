@@ -1,6 +1,21 @@
-08:55:09 **** Incremental Build of configuration Debug for project p4_quad_commands ****
+10:58:28 **** Auto Build of configuration Debug for project p4_quad_commands ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/quad_commands.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/quad_commands.d" -MT"src/quad_commands.d" -o "src/quad_commands.o" "../src/quad_commands.c"
+'Finished building: ../src/quad_commands.c'
+' '
+'Building target: p4_quad_commands.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../system_bsp/ps7_cortexa9_0/lib -o "p4_quad_commands.elf"  ./src/platform.o ./src/quad_commands.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: p4_quad_commands.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size p4_quad_commands.elf  |tee "p4_quad_commands.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90452	   2384	  30188	 123024	  1e090	p4_quad_commands.elf
+'Finished building: p4_quad_commands.elf.size'
+' '
 
-08:55:09 Build Finished (took 180ms)
+10:58:30 Build Finished (took 1s.745ms)
 
