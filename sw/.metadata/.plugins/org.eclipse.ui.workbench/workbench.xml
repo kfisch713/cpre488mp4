@@ -37,9 +37,9 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="quad_commands.c" partName="quad_commands.c" path="U:/Desktop/cpre488mp4/sw/p4_quad_commands/src/quad_commands.c" title="quad_commands.c" tooltip="p4_quad_commands/src/quad_commands.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="quad_commands.c" partName="quad_commands.c" path="U:/Documents/cpre488mp4/sw/p4_quad_commands/src/quad_commands.c" title="quad_commands.c" tooltip="p4_quad_commands/src/quad_commands.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/p4_quad_commands/src/quad_commands.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5179" selectionTopPixel="2532"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6185" selectionTopPixel="2941"/>
 </editor>
 </editors>
 <views>
@@ -81,7 +81,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -196,163 +196,157 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/p3_BT_configure/src/hello_quad_cities.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/p4_quad_commands/src/quad_commands.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_hw.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/include/xuartps.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_options.c"/>
 </editors>
-<item historyLabel="hello_quad_cities.c" index="0">
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="5813" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="5814" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
 <position/>
 </item>
-<item historyLabel="hello_quad_cities.c" index="0">
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="4885" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="9228" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="9334" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="9340" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="3090" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="4985" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="3644" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="3113" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
 <position/>
 </item>
-<item historyLabel="hello_quad_cities.c" index="0">
+<item historyLabel="quad_commands.c" index="0">
 <position/>
 </item>
-<item historyLabel="hello_quad_cities.c" index="0">
-<position info="not_deleted" x="3664" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="0">
+<item historyLabel="quad_commands.c" index="0">
 <position/>
 </item>
-<item historyLabel="hello_quad_cities.c" index="0">
-<position info="not_deleted" x="5358" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="0">
-<position info="not_deleted" x="5021" y="9"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="0">
-<position info="not_deleted" x="4521" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="0">
-<position info="not_deleted" x="4520" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="0">
-<position info="not_deleted" x="4521" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="0">
-<position info="not_deleted" x="5106" y="0"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="0">
-<position info="not_deleted" x="7072" y="0"/>
-</item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="8891" y="0"/>
-</item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="4329" y="0"/>
-</item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="4333" y="0"/>
-</item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="4339" y="0"/>
-</item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="5582" y="0"/>
-</item>
-<item historyLabel="quad_commands.c" index="1">
+<item historyLabel="quad_commands.c" index="0">
 <position/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="5774" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="5775" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="5782" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="5811" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="5812" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="4219" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="10282" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="10308" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="10318" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="10345" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="10346" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="10317" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="11496" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="3713" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="3714" y="0"/>
+</item>
+<item historyLabel="quad_commands.c" index="0">
 <position/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="5582" y="0"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="4063" y="0"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="4474" y="0"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="4064" y="0"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="4479" y="0"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="4021" y="0"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="4483" y="0"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="4022" y="0"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="4515" y="0"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="6324" y="0"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="4513" y="0"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="6328" y="0"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="4562" y="0"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="6334" y="0"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="9442" y="0"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="5415" y="0"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="2505" y="14"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="5549" y="0"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="3862" y="0"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="6148" y="0"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="12166" y="0"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="6146" y="0"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="11731" y="0"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="4665" y="0"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="11753" y="0"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="1651" y="8"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="10250" y="0"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="5816" y="16"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="10369" y="0"/>
 </item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="7176" y="16"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="12006" y="34"/>
 </item>
-<item historyLabel="xuartps_hw.c" index="2">
-<position info="not_deleted" x="3665" y="0"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="5884" y="0"/>
 </item>
-<item historyLabel="xuartps_hw.h" index="3">
-<position info="not_deleted" x="15313" y="0"/>
+<item historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="5885" y="0"/>
 </item>
-<item historyLabel="xuartps.c" index="4">
-<position info="not_deleted" x="13790" y="7"/>
-</item>
-<item historyLabel="xuartps.h" index="5">
-<position info="not_deleted" x="17270" y="0"/>
-</item>
-<item historyLabel="xuartps.c" index="4">
-<position info="not_deleted" x="13950" y="0"/>
-</item>
-<item historyLabel="xuartps.h" index="5">
-<position info="not_deleted" x="17275" y="17"/>
-</item>
-<item historyLabel="xuartps.c" index="4">
-<position info="not_deleted" x="13950" y="0"/>
-</item>
-<item historyLabel="xuartps.h" index="5">
-<position info="not_deleted" x="17275" y="17"/>
-</item>
-<item historyLabel="xuartps_options.c" index="6">
-<position info="not_deleted" x="4921" y="0"/>
-</item>
-<item historyLabel="xuartps_options.c" index="6">
-<position info="not_deleted" x="11855" y="17"/>
-</item>
-<item historyLabel="hello_quad_cities.c" index="0">
-<position info="not_deleted" x="7072" y="0"/>
-</item>
-<item historyLabel="xuartps_options.c" index="6">
-<position info="not_deleted" x="11855" y="17"/>
-</item>
-<item historyLabel="quad_commands.c" index="1">
-<position/>
-</item>
-<item historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="7427" y="0"/>
-</item>
-<item active="true" historyLabel="quad_commands.c" index="1">
-<position info="not_deleted" x="7430" y="0"/>
+<item active="true" historyLabel="quad_commands.c" index="0">
+<position info="not_deleted" x="5975" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -374,11 +368,11 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xuartps.h" tooltip="system_bsp/ps7_cortexa9_0/include/xuartps.h">
-<persistable path="/system_bsp/ps7_cortexa9_0/include/xuartps.h"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="quad_commands.c" tooltip="p4_quad_commands/src/quad_commands.c">
 <persistable path="/p4_quad_commands/src/quad_commands.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xuartps.h" tooltip="system_bsp/ps7_cortexa9_0/include/xuartps.h">
+<persistable path="/system_bsp/ps7_cortexa9_0/include/xuartps.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xuartps_options.c" tooltip="system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_options.c">
 <persistable path="/system_bsp/ps7_cortexa9_0/libsrc/uartps_v1_05_a/src/xuartps_options.c"/>

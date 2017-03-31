@@ -41,22 +41,41 @@
 
 XUartPs uart0;		/* The instance of the UART Driver */
 
+
+#define QUAD 4      /*  ***************  MODIFTY THIS VALUE WHEN SWITCHING TO A DIFFERENT QUAD  ************** */
+
+
 #define QUAD_NUM QUAD-1
-#define QUAD 6
+
+char *SWs = (char *)XPAR_SWS_8BITS_BASEADDR;
+char *BTNs = (char *)XPAR_BTNS_5BITS_BASEADDR;
+
+#define ARM_SWITCH 1
+#define INPUT_MODE_SWITCH 0
+#define KILL_SWITCH 7
+
+
+enum button_val {
+	BTN_L,
+	BTN_R,
+	BTN_U,
+	BTN_D,
+	BTN_C
+};
+
+int SW(unsigned int x) {
+	return ((*SWs >> x) & 0x01);
+}
+
+int BTN(unsigned int x) {
+	return ((*BTNs >> x) & 0x01);
+}
 
 /* Bit shifting for endianness of 16-bit numbers */
 #define LSByte16(x) ((x) & 0xff)
 #define MSByte16(x) (((x) >> 8) & 0xff)
 /* Build a 16-bit integer out of two bytes */
 #define BytesTo16(lsb, msb) (((lsb) & 0xff) | (((msb) & 0xff) << 8))
-/* Same for 32bit */
-#define IntByte1(x) ((x) & 0xff)
-#define IntByte2(x) (((x) >> 8) & 0xff)
-#define IntByte3(x) (((x) >> 16) & 0xff)
-#define IntByte4(x) (((x) >> 24) & 0xff)
-#define BytesToInt(b1, b2, b3, b4) (((b1) & 0xff) | (((b2) << 8) & 0xff) \
-		| (((b3) << 16) & 0xff) | (((b4) & 0xff)))
-
 
 const char* QUAD_ADDRESSES[] = {
 		"81EBB68B7913",
@@ -69,6 +88,8 @@ const char* QUAD_ADDRESSES[] = {
 };
 
 #define MSP_SET_RAW_RC	200
+#define MSP_RAW_IMU		102
+#define MSP_ATTITUDE	108
 
 enum MSP_BYTE {
 	PREAMBLE,
@@ -78,14 +99,17 @@ enum MSP_BYTE {
 	DATA_START,
 };
 
-//struct msp_packet {
-//
-//};
-
 int uart0_sendBuffer(XUartPs *InstancePtr, u8 *data, size_t num_bytes);
 int uart0_recvBuffer(XUartPs *InstancePtr, u8 *buffer, size_t num_bytes);
 int init_quad_cities(XUartPs_Config *Config);
 int send_command(XUartPs *InstancePtr, char* command, size_t command_len);
+int create_arm_packet(u8 * buff);
+int create_get_imu_packet(u8 * buff);
+int create_get_attitude_packet(u8 * buff);
+int create_disarm_packet(u8 * buff);
+int set_up_bt_chip();
+int was_quit_command(char * command);
+uint8_t calc_checksum(u8 * buff);
 
 char test_quad[6] = {0x24, 0x4d, 0x3c, 0x00, 0x6c, 0x6c };
 int main()
@@ -101,44 +125,34 @@ int main()
     	return 1;
     }
 
-//    sleep(1);
-//    send_command(&uart0, "$$$", 3);
-//    sleep(1);
-//    send_command(&uart0, "SM,3", 4);
-//    sleep(1);
-//    send_command(&uart0, "SP,0000", 7);
-//    sleep(1);
-//    send_command(&uart0, "SR,Z", 4);
-//    sleep(1);
-//
-//    strcpy(command, "SR,");
-//    strcat(command, QUAD_ADDRESSES[QUAD_NUM]);
-//
-//    send_command(&uart0, command, strlen(command));
-//    send_command(&uart0, "---", 3);
-//
-//    sleep(1);
-//    send_command(&uart0, "test_quad", 9);
+    // We want to program the chip. Then we can quickly restart and do a real run without this call
+    set_up_bt_chip();
 
-    //user inputs commands
-    while (1) {
-//    	xil_printf("\r\n>>>");
-//    	scanf("%s", command);
-//
-//    	if (strcmp(command, "quit") == 0) {
-//    		return 0;
-//    	}
-//
-    	send_command(&uart0, "arm", strlen(command));
+    while (!SW(KILL_SWITCH)) {
+
+    	if (SW(INPUT_MODE_SWITCH)) {
+    		if (SW(ARM_SWITCH)) send_command(&uart0, "arm", 3);
+			else				send_command(&uart0, "disarm", 6);
+
+    		send_command(&uart0, "get_imu", 7);
+    		send_command(&uart0, "get_attitude", 12);
+    	} else {
+    		xil_printf("\r\n>>>");
+			scanf("%s", command);
+			if (was_quit_command(command)) return 0;
+			if (!SW(INPUT_MODE_SWITCH))
+				send_command(&uart0, command, strlen(command));
+    	}
 
     	memset(command, 0, sizeof(command));
     }
-
+    xil_printf("quiting program...\n");
     return 0;
 }
 
 int send_command(XUartPs * uart, char* command, size_t command_len) {
 	size_t len;
+	int i;
 	u8 send_buff[512];
 	memset(send_buff, 0, sizeof(send_buff));
 	u8 recv_buff[512];
@@ -157,38 +171,17 @@ int send_command(XUartPs * uart, char* command, size_t command_len) {
 		memcpy(send_buff, command, strlen(command));
 		len = strlen(command);
 	} else if (strncmp(command, "arm", 3) == 0) {
-		static uint16_t roll_and_pitch = 1500;
-		static uint16_t yaw = 1950;
-		static uint16_t throttle = 1100;
-		memcpy((char*)send_buff, "$M", 2);
-		send_buff[DIRECTION] = '<';
-		send_buff[SIZE] = 16;
-		send_buff[COMMAND_ID] = MSP_SET_RAW_RC;
-		send_buff[DATA_START] = LSByte16(roll_and_pitch);
-		send_buff[DATA_START+1] = MSByte16(roll_and_pitch);
-		send_buff[DATA_START+2] = LSByte16(roll_and_pitch);
-		send_buff[DATA_START+3] = MSByte16(roll_and_pitch);
-		send_buff[DATA_START+4] = LSByte16(yaw);
-		send_buff[DATA_START+5] = MSByte16(yaw);
-		send_buff[DATA_START+6] = LSByte16(throttle);
-		send_buff[DATA_START+7] = MSByte16(throttle);
-		send_buff[DATA_START+8] = LSByte16(roll_and_pitch);
-		send_buff[DATA_START+9] = MSByte16(roll_and_pitch);
-		send_buff[DATA_START+10] = LSByte16(roll_and_pitch);
-		send_buff[DATA_START+11] = MSByte16(roll_and_pitch);
-		send_buff[DATA_START+12] = LSByte16(roll_and_pitch);
-		send_buff[DATA_START+13] = MSByte16(roll_and_pitch);
-		send_buff[DATA_START+14] = LSByte16(roll_and_pitch);
-		send_buff[DATA_START+15] = MSByte16(roll_and_pitch);
-		size_t i;
-		uint8_t crc = 0;
-		for (i = SIZE; i < (DATA_START + 16); ++i) {
-			crc ^= send_buff[i];
-		}
-		send_buff[DATA_START + 16] = crc;
-		len = DATA_START + 16;
+		create_arm_packet(send_buff);
+		len = 22;
 	} else if (strncmp(command, "disarm", 6) == 0) {
-
+		create_disarm_packet(send_buff);
+		len = 22;
+	} else if (strncmp(command, "get_imu", 7) == 0) {
+		create_get_imu_packet(send_buff);
+		len = 22;
+	} else if (strncmp(command, "get_attitude", 12) == 0) {
+		create_get_attitude_packet(send_buff);
+		len = 22;
 	} else {
 		strcpy((char*)send_buff, command);
 		strcat((char*)send_buff, "\r");
@@ -200,18 +193,40 @@ int send_command(XUartPs * uart, char* command, size_t command_len) {
 	uart0_recvBuffer(uart, recv_buff, 512);
 
 	if (strcmp(command, "test_quad") == 0) {
-		int i;
 		xil_printf("Quad response... \n");
 		for (i = 0; i < 12; ++i) {
 			xil_printf("0x%2X ", recv_buff[i]);
 		}
 		xil_printf("\n");
 	} else if (strcmp(command, "arm") == 0) {
-//		xil_printf("arming\n");
-	} else  {
+		xil_printf("arming\n");
+	} else if (strcmp(command, "disarm") == 0) {
+		xil_printf("disarming\n");
+	} else if (strcmp(command, "get_imu") == 0) {
+		xil_printf("IMU : ");
+		for (i = 0; i < 18 + DATA_START; ++i) {
+			xil_printf("0x%X ", recv_buff[i]);
+		}
+		xil_printf("\n");
+	} else if (strcmp(command, "get_attitude") == 0) {
+		xil_printf("ATTITUDE : ");
+		for (i = 0; i < 6 + DATA_START; ++i) {
+			xil_printf("0x%X ", recv_buff[i]);
+		}
+		xil_printf("\n");
+	} else {
 		xil_printf("%s\n", recv_buff);
 	}
 
+	return 0;
+}
+
+
+int was_quit_command(char * command) {
+	if (strncmp(command, "quit", 4) == 0) {
+		xil_printf("Leaving program...\n");
+		return 1;
+	}
 	return 0;
 }
 
@@ -317,4 +332,125 @@ int uart0_recvBuffer(XUartPs *InstancePtr, u8 *buffer, size_t num_bytes) {
 	}
 
 	return bytes_recv;
+}
+
+int create_arm_packet(u8 * buff) {
+	uint16_t roll_and_pitch = 1500;
+	uint16_t yaw = 1950;
+	uint16_t throttle = 1100;
+
+	buff[PREAMBLE] = '$';
+	buff[PREAMBLE + 1] = 'M';
+	buff[DIRECTION] = '<';
+	buff[SIZE] = 16;
+	buff[COMMAND_ID] = MSP_SET_RAW_RC;
+	buff[DATA_START] = LSByte16(roll_and_pitch);
+	buff[DATA_START+1] = MSByte16(roll_and_pitch);
+	buff[DATA_START+2] = LSByte16(roll_and_pitch);
+	buff[DATA_START+3] = MSByte16(roll_and_pitch);
+	buff[DATA_START+4] = LSByte16(yaw);
+	buff[DATA_START+5] = MSByte16(yaw);
+	buff[DATA_START+6] = LSByte16(throttle);
+	buff[DATA_START+7] = MSByte16(throttle);
+	buff[DATA_START+8] = LSByte16(roll_and_pitch);
+	buff[DATA_START+9] = MSByte16(roll_and_pitch);
+	buff[DATA_START+10] = LSByte16(roll_and_pitch);
+	buff[DATA_START+11] = MSByte16(roll_and_pitch);
+	buff[DATA_START+12] = LSByte16(roll_and_pitch);
+	buff[DATA_START+13] = MSByte16(roll_and_pitch);
+	buff[DATA_START+14] = LSByte16(roll_and_pitch);
+	buff[DATA_START+15] = MSByte16(roll_and_pitch);
+	buff[DATA_START + 16] = calc_checksum(buff);
+
+//	for (i = 0; i < 22; ++i) {
+//		xil_printf("0x%X ", buff[i]);
+//	}
+//	xil_printf("\n");
+
+
+	return 0;
+}
+
+int create_disarm_packet(u8 * buff) {
+	uint16_t roll_and_pitch = 1500;
+	uint16_t yaw = 1000;
+	uint16_t throttle = 1000;
+
+	buff[PREAMBLE] = '$';
+	buff[PREAMBLE + 1] = 'M';
+	buff[DIRECTION] = '<';
+	buff[SIZE] = 16;
+	buff[COMMAND_ID] = MSP_SET_RAW_RC;
+	buff[DATA_START] = LSByte16(roll_and_pitch);
+	buff[DATA_START+1] = MSByte16(roll_and_pitch);
+	buff[DATA_START+2] = LSByte16(roll_and_pitch);
+	buff[DATA_START+3] = MSByte16(roll_and_pitch);
+	buff[DATA_START+4] = LSByte16(yaw);
+	buff[DATA_START+5] = MSByte16(yaw);
+	buff[DATA_START+6] = LSByte16(throttle);
+	buff[DATA_START+7] = MSByte16(throttle);
+	buff[DATA_START+8] = LSByte16(roll_and_pitch);
+	buff[DATA_START+9] = MSByte16(roll_and_pitch);
+	buff[DATA_START+10] = LSByte16(roll_and_pitch);
+	buff[DATA_START+11] = MSByte16(roll_and_pitch);
+	buff[DATA_START+12] = LSByte16(roll_and_pitch);
+	buff[DATA_START+13] = MSByte16(roll_and_pitch);
+	buff[DATA_START+14] = LSByte16(roll_and_pitch);
+	buff[DATA_START+15] = MSByte16(roll_and_pitch);
+
+	buff[DATA_START + 16] = calc_checksum(buff);
+
+//	for (i = 0; i < 22; ++i) {
+//		xil_printf("0x%X ", buff[i]);
+//	}
+//	xil_printf("\n");
+	return 0;
+}
+
+int create_get_imu_packet(u8 * buff) {
+	buff[PREAMBLE] = '$';
+	buff[PREAMBLE + 1] = 'M';
+	buff[DIRECTION] = '<';
+	buff[SIZE] = 0;
+	buff[COMMAND_ID] = MSP_RAW_IMU;
+	buff[DATA_START] = calc_checksum(buff);
+	return 0;
+}
+int create_get_attitude_packet(u8 * buff) {
+	buff[PREAMBLE] = '$';
+	buff[PREAMBLE + 1] = 'M';
+	buff[DIRECTION] = '<';
+	buff[SIZE] = 0;
+	buff[COMMAND_ID] = MSP_ATTITUDE;
+	buff[DATA_START] = calc_checksum(buff);
+	return 0;
+}
+
+uint8_t calc_checksum(u8 * buff) {
+	size_t i;
+	uint8_t crc = 0;
+	for (i = SIZE; i < (DATA_START + buff[SIZE]); ++i) {
+		crc ^= buff[i];
+	}
+	return crc;
+}
+
+int set_up_bt_chip() {
+	char buff[128];
+	sleep(1);
+	send_command(&uart0, "$$$", 3);
+	sleep(1);
+	send_command(&uart0, "SM,3", 4);
+	sleep(1);
+	send_command(&uart0, "SP,0000", 7);
+	sleep(1);
+	send_command(&uart0, "SR,Z", 4);
+	sleep(1);
+
+	strcpy(buff, "SR,");
+	strcat(buff, QUAD_ADDRESSES[QUAD_NUM]);
+
+	send_command(&uart0, buff, strlen(buff));
+	send_command(&uart0, "---", 3);
+	return 1;
 }
