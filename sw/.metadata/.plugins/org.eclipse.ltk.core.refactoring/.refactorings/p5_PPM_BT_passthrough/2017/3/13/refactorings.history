@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;p5_PPM_BT_passthrough/src/helloworld.c&apos; to &apos;ppm_passthrough&apos;" description="Rename resource &apos;helloworld.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/helloworld.c" name="ppm_passthrough" stamp="1490979139437" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;p5_PPM_BT_passthrough/src/ppm_passthrough&apos; to &apos;ppm_passthrough.c&apos;" description="Rename resource &apos;ppm_passthrough&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/ppm_passthrough" name="ppm_passthrough.c" stamp="1490979145529" updateReferences="true"/>
+</session>

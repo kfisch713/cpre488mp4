@@ -1,0 +1,3 @@
+
+NET "PCTX_in"         LOC = AA9  | IOSTANDARD=LVCMOS33;  # "JA4" Input PPM
+NET "PCTx_out"        LOC = W8  | IOSTANDARD=LVCMOS33;  # "JB4" Output PPM

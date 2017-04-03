@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "/home/zambreno/dev/cpre488-admin/Solutions/MP-1-sol/system/pcores/axi_ppm_v1_00_a/devl/synthesis/axi_ppm_xst.prj"
+-top axi_ppm
+-p virtex6
+-ofn "/home/zambreno/dev/cpre488-admin/Solutions/MP-1-sol/system/pcores/axi_ppm_v1_00_a/devl/synthesis/axi_ppm_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib axi_ppm_v1_00_a
