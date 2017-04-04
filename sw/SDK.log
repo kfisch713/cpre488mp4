@@ -1183,3 +1183,64 @@ UNABLE to Read Elf File. The Elf File Maybe Corrupted
 13:42:22.161 INFO  - Processor reset is completed for ps7_cortexa9_0 
 13:44:42.433 INFO  - Processor reset is completed for ps7_cortexa9_0 
 13:50:32.290 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:38:36.658 INFO  - Processor reset is completed for ps7_cortexa9_0 
+09:38:36.758 INFO  - PS initialization will be done as it is not done before. 
+09:38:36.758 INFO  - Running PS initialization.... 
+09:38:37.188 INFO  - ps7_init is completed. 
+09:38:37.298 INFO  - ps7_post_config is completed. 
+09:38:37.408 INFO  - PS Initialization is complete. 
+09:39:22.714 INFO  - Processor reset is completed for ps7_cortexa9_0 
+09:46:09.111 INFO  - Processor reset is completed for ps7_cortexa9_0 
+09:49:05.027 INFO  - Processor reset is completed for ps7_cortexa9_0 
+09:51:11.140 INFO  - Processor reset is completed for ps7_cortexa9_0 
+09:54:22.761 INFO  - Processor reset is completed for ps7_cortexa9_0 
+09:56:52.022 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:00:13.206 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:04:16.962 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:05:14.179 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:27:40.458 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:31:25.789 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:36:14.479 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:36:38.611 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:51:58.256 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:51:58.356 INFO  - PS initialization will be done as it is not done before. 
+10:51:58.356 INFO  - Running PS initialization.... 
+10:51:58.786 INFO  - ps7_init is completed. 
+10:51:58.886 INFO  - ps7_post_config is completed. 
+10:51:58.996 INFO  - PS Initialization is complete. 
+10:54:39.809 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:54:42.655 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:56:13.479 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+10:56:16.464 INFO  - Processor reset is completed for ps7_cortexa9_0 
+10:58:50.313 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488mp4/sw/system_hw_platform/system.bit" 
+10:59:13.682 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:01:02.367 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+11:01:15.961 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:01:22.217 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+11:01:29.006 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:02:27.492 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:03:20.815 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:03:39.964 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:07:49.931 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488mp4/sw/system_hw_platform/system.bit" 
+11:11:56.027 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:11:56.137 INFO  - PS initialization will be done as it is not done before. 
+11:11:56.137 INFO  - Running PS initialization.... 
+11:11:56.567 INFO  - ps7_init is completed. 
+11:11:56.668 INFO  - ps7_post_config is completed. 
+11:11:56.768 INFO  - PS Initialization is complete. 
+11:14:18.455 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:16:30.342 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:17:22.560 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:41:57.546 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:41:59.834 INFO  - Processor reset is completed for ps7_cortexa9_0 
+11:42:26.527 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+11:42:29.786 INFO  - Processor reset is completed for ps7_cortexa9_0 
+12:22:57.059 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

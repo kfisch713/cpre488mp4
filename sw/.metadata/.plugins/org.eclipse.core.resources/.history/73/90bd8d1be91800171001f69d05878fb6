@@ -37,16 +37,13 @@
 #include <xuartps.h>
 #include <xuartps_hw.h>
 
-#include "stdint.h"
 #include "platform.h"
-#include <math.h>
 
 XUartPs uart0;		/* The instance of the UART Driver */
 
-
 #define QUAD 2      /*  ***************  MODIFTY THIS VALUE WHEN SWITCHING TO A DIFFERENT QUAD  ************** */
 
-
+#define PPM_BASE_ADDRESS 0x7DE00000
 #define QUAD_NUM QUAD-1
 
 char *SWs = (char *)XPAR_SWS_8BITS_BASEADDR;
@@ -55,7 +52,6 @@ char *BTNs = (char *)XPAR_BTNS_5BITS_BASEADDR;
 #define ARM_SWITCH 1
 #define INPUT_MODE_SWITCH 0
 #define KILL_SWITCH 7
-
 
 enum button_val {
 	BTN_L,
@@ -105,101 +101,78 @@ int uart0_sendBuffer(XUartPs *InstancePtr, u8 *data, size_t num_bytes);
 int uart0_recvBuffer(XUartPs *InstancePtr, u8 *buffer, size_t num_bytes);
 int init_quad_cities(XUartPs_Config *Config);
 int send_command(XUartPs *InstancePtr, char* command, size_t command_len);
-int create_arm_packet(u8 * buff);
+int create_arm_packet(u8 * buff, u16 roll, u16 pitch, u16 throttle, u16 yaw);
 int create_get_imu_packet(u8 * buff);
 int create_get_attitude_packet(u8 * buff);
 int create_disarm_packet(u8 * buff);
 int set_up_bt_chip();
 int was_quit_command(char * command);
 uint8_t calc_checksum(u8 * buff);
-float calc_pitch(int16_t y_mag);
+
+enum ppm_offsets {
+	ROLL_REG = 10,
+	PITCH_REG,
+	THROTTLE_REG,
+	YAW_REG
+};
+
+int * SLV_REG(unsigned int x){
+	return ((int *)((XPAR_AXI_PPM_0_BASEADDR) + (x * 4)));
+}
+
+unsigned int map(unsigned int x, unsigned int in_min, unsigned int in_max, unsigned int out_min, unsigned int out_max)
+{
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
 
 char test_quad[6] = {0x24, 0x4d, 0x3c, 0x00, 0x6c, 0x6c };
 int main()
 {
+
+	/*Roll, Pitch, Throttle, Yaw */
+	/* 10,  11,     12,      13 */
+	int roll, pitch, throttle, yaw;
+
     init_platform();
     XUartPs_Config config;
     u8 recv_buffer[256];
     size_t recv_buf_len = sizeof(recv_buffer);
-    u8 command[128];
+    u8 send_buff[64];
     memset(recv_buffer, 0, recv_buf_len);
 
     if (init_quad_cities(&config)) {
     	return 1;
     }
 
-    // We want to program the chip. Then we can quickly restart and do a real run without this call
-    //set_up_bt_chip();
-
-
-
-	int16_t accx;
-	int16_t accy;
-	int16_t accz;
-	int16_t gyrx;
-	int16_t gyry;
-	int16_t gyrz;
-	int16_t magx;
-	int16_t magy;
-	int16_t magz;
-
-	const float alpha = 0.5;
-	float pitch, roll;
+//    set_up_bt_chip();
 
     while (!SW(KILL_SWITCH)) {
-    	create_get_imu_packet(command);
-		uart0_sendBuffer(&uart0, command, 22);
+    	roll = *SLV_REG(ROLL_REG);
+    	pitch = *SLV_REG(PITCH_REG);
+    	throttle = *SLV_REG(THROTTLE_REG);
+    	yaw = *SLV_REG(YAW_REG);
+
+    	roll = 		map(roll, 		74000, 156000, 1000, 2000);
+    	pitch = 	map(pitch, 		74000, 145000, 1000, 2000);
+    	throttle = 	map(throttle, 	70000, 145000, 1000, 2000);
+    	yaw = 		map(yaw, 		75500, 165000, 1000, 2000);
+
+    	xil_printf("ROLL  %5d\t   PITCH  %5d\t THROTTLE  %5d\t  YAW  %5d\n",
+    			(unsigned int)roll, (unsigned int)pitch, (unsigned int)throttle, (unsigned int)yaw);
+
+    	if(SW(ARM_SWITCH)) {
+    		throttle = 1000;
+    		yaw = 1000;
+    		xil_printf("disarming\n");
+    	}
+
+    	create_arm_packet(send_buff, roll, pitch, throttle, yaw);
+		uart0_sendBuffer(&uart0, send_buff, 22);
 		uart0_recvBuffer(&uart0, recv_buffer, 256);
-
-		accx = BytesTo16(recv_buffer[DATA_START+0], recv_buffer[DATA_START+1]);
-		accy = BytesTo16(recv_buffer[DATA_START+2], recv_buffer[DATA_START+3]);
-		accz = BytesTo16(recv_buffer[DATA_START+4], recv_buffer[DATA_START+5]);
-		gyrx = BytesTo16(recv_buffer[DATA_START+6], recv_buffer[DATA_START+7]);
-		gyry = BytesTo16(recv_buffer[DATA_START+8], recv_buffer[DATA_START+9]);
-		gyrz = BytesTo16(recv_buffer[DATA_START+10], recv_buffer[DATA_START+11]);
-		magx = BytesTo16(recv_buffer[DATA_START+12], recv_buffer[DATA_START+13]);
-		magy = BytesTo16(recv_buffer[DATA_START+14], recv_buffer[DATA_START+15]);
-		magz = BytesTo16(recv_buffer[DATA_START+16], recv_buffer[DATA_START+17]);
-
-		if (recv_buffer[DATA_START+18] != calc_checksum(recv_buffer)) {
-			continue;
-		}
-
-
-//		accx = (double)accx * alpha + ((double)accx * (1.0 - alpha));
-//		accy = (double)accy * alpha + ((double)accy * (1.0 - alpha));
-//		accz = (double)accz * alpha + ((double)accz * (1.0 - alpha));
-
-//		roll = (atan2(-accy, accz)*180.0)/M_PI;
-//		pitch = (atan2((double)accx, sqrt((double)accy*(double)accy + (double)accz*(double)accz))*180.0)/M_PI;
-
-		roll = calc_pitch(accx);
-		pitch = calc_pitch(accy);
-
-
-		//xil_printf("ACC: X %7d\tY %7d\tZ %7d\nGYR: X %7d\tY %7d\tZ %7d\nMAG: X %7d\tY %7d\tZ %7d\n\n",
-		//		accx, accy, accz, gyrx, gyry, gyrz, magx, magy, magz);
-
-		printf("Pitch: %f\t Roll %f\n", pitch, roll);
-		sleep(0.2);
     }
     xil_printf("quiting program...\n");
     return 0;
 }
-
-
-float calc_pitch(int16_t x_or_y_mag){
-		float mag = x_or_y_mag/256.0;
-        if (mag > 1) {mag = 1;}
-        else if (mag <-1) {mag = -1;}
-        else mag = asin(mag);
-
-        mag = (180.0/PI) * ma;
-        return mag;
-}
-
-
-
 
 int send_command(XUartPs * uart, char* command, size_t command_len) {
 	size_t len;
@@ -234,7 +207,7 @@ int send_command(XUartPs * uart, char* command, size_t command_len) {
 		uart0_sendBuffer(uart, send_buff, len);
 		uart0_recvBuffer(uart, recv_buff, 512);
 	} else if (strncmp(command, "arm", 3) == 0) {
-		create_arm_packet(send_buff);
+//		create_arm_packet(send_buff);
 		len = 22;
 
 		uart0_sendBuffer(uart, send_buff, len);
@@ -395,32 +368,29 @@ int uart0_recvBuffer(XUartPs *InstancePtr, u8 *buffer, size_t num_bytes) {
 	return bytes_recv;
 }
 
-int create_arm_packet(u8 * buff) {
-	uint16_t roll_and_pitch = 1500;
-	uint16_t yaw = 1950;
-	uint16_t throttle = 1100;
+int create_arm_packet(u8 * buff, u16 roll, u16 pitch, u16 throttle, u16 yaw) {
 
 	buff[PREAMBLE] = '$';
 	buff[PREAMBLE + 1] = 'M';
 	buff[DIRECTION] = '<';
 	buff[SIZE] = 16;
 	buff[COMMAND_ID] = MSP_SET_RAW_RC;
-	buff[DATA_START] = LSByte16(roll_and_pitch);
-	buff[DATA_START+1] = MSByte16(roll_and_pitch);
-	buff[DATA_START+2] = LSByte16(roll_and_pitch);
-	buff[DATA_START+3] = MSByte16(roll_and_pitch);
+	buff[DATA_START] = LSByte16(roll);
+	buff[DATA_START+1] = MSByte16(roll);
+	buff[DATA_START+2] = LSByte16(pitch);
+	buff[DATA_START+3] = MSByte16(pitch);
 	buff[DATA_START+4] = LSByte16(yaw);
 	buff[DATA_START+5] = MSByte16(yaw);
 	buff[DATA_START+6] = LSByte16(throttle);
 	buff[DATA_START+7] = MSByte16(throttle);
-	buff[DATA_START+8] = LSByte16(roll_and_pitch);
-	buff[DATA_START+9] = MSByte16(roll_and_pitch);
-	buff[DATA_START+10] = LSByte16(roll_and_pitch);
-	buff[DATA_START+11] = MSByte16(roll_and_pitch);
-	buff[DATA_START+12] = LSByte16(roll_and_pitch);
-	buff[DATA_START+13] = MSByte16(roll_and_pitch);
-	buff[DATA_START+14] = LSByte16(roll_and_pitch);
-	buff[DATA_START+15] = MSByte16(roll_and_pitch);
+	buff[DATA_START+8] = LSByte16(roll);
+	buff[DATA_START+9] = MSByte16(roll);
+	buff[DATA_START+10] = LSByte16(roll);
+	buff[DATA_START+11] = MSByte16(roll);
+	buff[DATA_START+12] = LSByte16(roll);
+	buff[DATA_START+13] = MSByte16(roll);
+	buff[DATA_START+14] = LSByte16(roll);
+	buff[DATA_START+15] = MSByte16(roll);
 	buff[DATA_START + 16] = calc_checksum(buff);
 
 //	for (i = 0; i < 22; ++i) {

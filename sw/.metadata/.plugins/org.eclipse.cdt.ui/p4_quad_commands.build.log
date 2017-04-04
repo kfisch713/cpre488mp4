@@ -1,6 +1,6 @@
-13:44:39 **** Incremental Build of configuration Debug for project p4_quad_commands ****
+11:42:24 **** Incremental Build of configuration Debug for project p4_quad_commands ****
 make all 
 make: Nothing to be done for `all'.
 
-13:44:39 Build Finished (took 140ms)
+11:42:24 Build Finished (took 130ms)
 
