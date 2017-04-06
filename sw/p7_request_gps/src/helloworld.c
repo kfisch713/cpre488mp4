@@ -42,7 +42,7 @@
 XUartPs uart0;		/* The instance of the UART Driver */
 XUartPs uart1;
 
-#define QUAD 7      /*  ***************  MODIFTY THIS VALUE WHEN SWITCHING TO A DIFFERENT QUAD  ************** */
+#define QUAD 6      /*  ***************  MODIFTY THIS VALUE WHEN SWITCHING TO A DIFFERENT QUAD  ************** */
 
 #define PPM_BASE_ADDRESS 0x7DE00000
 #define QUAD_NUM QUAD-1
@@ -101,7 +101,7 @@ enum MSP_BYTE {
 int uart0_sendBuffer(XUartPs *InstancePtr, u8 *data, size_t num_bytes);
 int uart0_recvBuffer(XUartPs *InstancePtr, u8 *buffer, size_t num_bytes);
 int init_quad_cities(XUartPs_Config *Config);
-int init_server_uart(XUartPs_Config *Config);
+int init_client_uart(XUartPs_Config *Config);
 int send_command(XUartPs *InstancePtr, char* command, size_t command_len);
 int create_arm_packet(u8 * buff, u16 roll, u16 pitch, u16 throttle, u16 yaw);
 int create_get_imu_packet(u8 * buff);
@@ -132,20 +132,36 @@ char test_quad[6] = {0x24, 0x4d, 0x3c, 0x00, 0x6c, 0x6c };
 char debug_msg[1000];
 int main()
 {
-    init_platform();
+	init_platform();
+	XUartPs_Config config;
+	XUartPs_Config config1;
+	u8 recv_buffer[256];
 
-    float x, y, z, yaw;
-    size_t i;
+	if (init_quad_cities(&config)) {
+		return 1;
+	}
+
+	if (init_client_uart(&config1)) {
+		return 1;
+	}
+
+//	set_up_bt_chip();
+	float x, y, z, yaw;
     while (!SW(KILL_SWITCH)) {
     	if (BTN(BTN_C)) {
-			printf("S");
-			scanf("X =%f, Y=%f, Z=%f, Yaw=%f", &x, &y, &z, &yaw);
-			sprintf(debug_msg, "Found %f\t%f\t%f\t%f", x, y, z, yaw);
-			printf("D");
-			for(i = 0; i < 1000; ++i) {
-				printf("%c", debug_msg[i]);
-			}
+    		sprintf(debug_msg, "Found %f\t%f\t%f\t%f\n", x, y ,z ,yaw);
+			uart0_sendBuffer(&uart1, (u8*)"D", 1);
+			uart0_sendBuffer(&uart1, (u8*)debug_msg, 1000);
+    	} else {
+    		uart0_sendBuffer(&uart1, (u8*)"S", 1);
     	}
+
+    	uart0_recvBuffer(&uart1, recv_buffer, 16);
+    	memcpy(&x, recv_buffer, 4);
+    	memcpy(&y, recv_buffer+4, 4);
+    	memcpy(&z, recv_buffer+8, 4);
+    	memcpy(&yaw, recv_buffer+12, 4);
+		sleep(0.5);
     }
     xil_printf("quiting program...\n");
     return 0;
@@ -273,6 +289,27 @@ int init_quad_cities(XUartPs_Config *Config){
 	return 0;
 }
 
+int init_client_uart(XUartPs_Config * Config) {
+	int status;
+
+	/*
+	 * Initialize the UART driver so that it's ready to use
+	 * Look up the configuration in the config table and then initialize it.
+	 */
+	Config = XUartPs_LookupConfig(XPAR_PS7_UART_1_DEVICE_ID);
+	if (Config == NULL) {
+		return XST_FAILURE;
+	}
+	xil_printf("Look up Config Success\n");
+
+	status = XUartPs_CfgInitialize(&uart1, Config, Config->BaseAddress);
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	xil_printf("Initialize Config Success\n");
+	return 0;
+}
 /*
  * Send a buffer one byte at a time. With a timeout specified by SEND_TIMEOUT.
  *

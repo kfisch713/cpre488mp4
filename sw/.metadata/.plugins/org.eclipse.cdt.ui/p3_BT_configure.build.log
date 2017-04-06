@@ -1,6 +1,6 @@
-11:42:25 **** Incremental Build of configuration Debug for project p3_BT_configure ****
+19:24:23 **** Incremental Build of configuration Debug for project p3_BT_configure ****
 make all 
 make: Nothing to be done for `all'.
 
-11:42:26 Build Finished (took 180ms)
+19:24:23 Build Finished (took 180ms)
 

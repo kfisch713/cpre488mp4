@@ -1244,3 +1244,119 @@ UNABLE to Read Elf File. The Elf File Maybe Corrupted
 11:42:26.527 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
 11:42:29.786 INFO  - Processor reset is completed for ps7_cortexa9_0 
 12:22:57.059 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:16:28.972 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488mp4/sw/system_hw_platform/system.bit" 
+16:16:50.028 ERROR - No such port: COM19 
+16:16:50.403 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:16:50.513 INFO  - PS initialization will be done as it is not done before. 
+16:16:50.513 INFO  - Running PS initialization.... 
+16:16:50.973 INFO  - ps7_init is completed. 
+16:16:51.073 INFO  - ps7_post_config is completed. 
+16:16:51.183 INFO  - PS Initialization is complete. 
+16:17:49.364 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:30:35.739 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:32:38.258 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:32:40.773 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:36:25.404 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+16:36:27.938 INFO  - Processor reset is completed for ps7_cortexa9_0 
+16:38:53.805 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:18:32.716 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:18:35.645 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:20:39.713 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488mp4/sw/system_hw_platform/system.bit" 
+17:24:28.050 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:25:20.988 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:25:23.175 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:27:57.424 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:31:39.132 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:32:51.823 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:34:36.700 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:35:22.731 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:35:25.365 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:38:31.054 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:38:31.164 INFO  - PS initialization will be done as it is not done before. 
+17:38:31.164 INFO  - Running PS initialization.... 
+17:38:31.634 INFO  - ps7_init is completed. 
+17:38:31.744 INFO  - ps7_post_config is completed. 
+17:38:31.844 INFO  - PS Initialization is complete. 
+17:39:01.073 ERROR - FPGA Configuration failed.Failed to download the bit file
+
+    Failed to verify DONE bit after programming FPGA
+ 
+17:39:20.227 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488mp4/sw/system_hw_platform/system.bit" 
+17:39:41.008 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:39:42.465 ERROR - Unexpected error while launching program. java.lang.RuntimeException: No Active System
+
+	at com.xilinx.sdk.targetmanager.internal.TM.stop(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.CPURunSession.terminate(Unknown Source)
+
+17:39:51.617 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+17:40:22.106 INFO  - FPGA configured successfully with bitstream "U:/Documents/cpre488mp4/sw/system_hw_platform/system.bit" 
+17:40:33.148 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:40:33.258 INFO  - PS initialization will be done as it is not done before. 
+17:40:33.258 INFO  - Running PS initialization.... 
+17:40:33.718 INFO  - ps7_init is completed. 
+17:40:33.828 INFO  - ps7_post_config is completed. 
+17:40:33.928 INFO  - PS Initialization is complete. 
+17:41:36.620 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:42:08.372 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:42:51.037 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:43:26.367 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:44:05.615 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:45:01.680 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:45:44.381 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:46:48.949 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:47:56.110 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:52:07.193 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:52:26.579 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:52:29.840 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:54:28.110 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:57:30.908 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+17:57:41.622 INFO  - Processor reset is completed for ps7_cortexa9_0 
+17:59:17.843 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:01:32.542 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:04:00.305 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:08:31.092 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:18:15.189 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:21:48.897 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:25:17.436 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:27:09.194 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:33:46.376 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:33:49.533 ERROR - Unexpected error while launching program. java.lang.RuntimeException: Failed to download ELF file
+
+UNABLE to Open File
+    : U:/Documents/cpre488mp4/sw/p5_PPM_BT_passthrough/Debug/p5_PPM_BT_passthrough.elf
+
+	at com.xilinx.sdk.targetmanager.internal.TM.downloadELF(Unknown Source)
+	at com.xilinx.sdk.debug.core.internal.AppRunner.run(Unknown Source)
+
+18:33:55.366 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:34:45.055 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:36:58.242 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:41:34.787 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:41:36.860 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:43:07.460 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:43:11.201 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:46:13.630 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:47:21.508 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:47:25.681 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:48:30.660 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:49:47.573 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+18:49:49.657 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:53:18.942 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:56:33.384 INFO  - Processor reset is completed for ps7_cortexa9_0 
+18:59:44.324 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:00:29.301 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:02:29.553 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:02:31.650 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:04:16.566 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:08:43.937 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:13:17.526 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:14:29.624 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:17:19.382 INFO  - ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching. 
+19:17:21.794 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:23:32.083 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:24:24.542 INFO  - Processor reset is completed for ps7_cortexa9_0 
+19:26:09.785 ERROR - Unable to disconnect from existing targets java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(Unknown Source)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(Unknown Source)
+
+19:26:09.794 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

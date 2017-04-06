@@ -41,7 +41,7 @@
 
 XUartPs uart0;		/* The instance of the UART Driver */
 
-#define QUAD 2      /*  ***************  MODIFTY THIS VALUE WHEN SWITCHING TO A DIFFERENT QUAD  ************** */
+#define QUAD 6      /*  ***************  MODIFTY THIS VALUE WHEN SWITCHING TO A DIFFERENT QUAD  ************** */
 
 #define PPM_BASE_ADDRESS 0x7DE00000
 #define QUAD_NUM QUAD-1
@@ -128,7 +128,6 @@ unsigned int map(unsigned int x, unsigned int in_min, unsigned int in_max, unsig
 char test_quad[6] = {0x24, 0x4d, 0x3c, 0x00, 0x6c, 0x6c };
 int main()
 {
-
 	/*Roll, Pitch, Throttle, Yaw */
 	/* 10,  11,     12,      13 */
 	int roll, pitch, throttle, yaw;
@@ -144,7 +143,7 @@ int main()
     	return 1;
     }
 
-    set_up_bt_chip();
+//    set_up_bt_chip();
 
     while (!SW(KILL_SWITCH)) {
     	roll = *SLV_REG(ROLL_REG);

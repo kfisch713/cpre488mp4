@@ -36,7 +36,6 @@ void outs( charptr lp, struct params_s *par);
 void outnum( const long n, const long base, struct params_s *par);
 int getnum( charptr* linep);
 void xil_printf( const char *ctrl1, ...);
-void print( const char *ptr);
 void outbyte (char);
 char inbyte(void);
 
